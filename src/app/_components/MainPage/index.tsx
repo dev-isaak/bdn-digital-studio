@@ -1,6 +1,7 @@
 import Footer from "../Footer";
 import Faqs from "./Faqs";
-import FirstSection from "./FirstSection";
+import Services from "./Services";
+import FirstSection from "./Value";
 
 export default function MainPage() {
 	return (
@@ -27,6 +28,9 @@ export default function MainPage() {
 			<div className='m-auto max-w-7xl px-4 flex flex-col gap-10 my-10'>
 				<section>
 					<FirstSection />
+				</section>
+				<section>
+					<Services />
 				</section>
 				<section>
 					<Faqs />
