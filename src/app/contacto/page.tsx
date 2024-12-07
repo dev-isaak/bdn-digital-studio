@@ -1,3 +1,3 @@
 export default function Contacto() {
-	return <h1>hola</h1>;
+	return <h1>Contacto</h1>;
 }
