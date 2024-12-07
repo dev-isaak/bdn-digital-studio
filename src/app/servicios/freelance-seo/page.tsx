@@ -1,11 +1,9 @@
 import Heading from "@/app/_components/Heading";
-import TwoBlockGrid from "../components/TwoBlockGrid";
 import { Image } from "@nextui-org/react";
-import CardWithTopNumber from "@/app/_components/CardWithTopNumber";
 import OurMetodology from "./OurMetodology";
 import Faq from "./Faq";
 import ContactBlock from "@/app/_components/ContactBlock";
-import CardsBlock from "../components/CardsBlock";
+import TwoBlockGrid from "../components/TwoBlockGrid";
 import AtreveteSection from "./AtreveteSection";
 import ServiciosSection from "./ServiciosSection";
 
