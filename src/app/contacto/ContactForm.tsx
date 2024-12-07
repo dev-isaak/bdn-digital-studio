@@ -1,6 +1,10 @@
 "use client";
 import React from "react";
 import { Form, Input, Checkbox, Button, Textarea } from "@nextui-org/react";
+import { sendEmail } from "../services/email";
+import "react-toastify/dist/ReactToastify.css";
+import { errorToast } from "../_components/toastify";
+import { redirect } from "next/navigation";
 
 interface ErrorProps {
 	name: string;
@@ -37,7 +41,7 @@ export default function ContactForm() {
 		description: "",
 	});
 
-	const onSubmit = (e: any) => {
+	const onSubmit = async (e: any) => {
 		e.preventDefault();
 		const data = Object.fromEntries(new FormData(e.currentTarget));
 
@@ -73,7 +77,13 @@ export default function ContactForm() {
 			webOptimization: "",
 			description: "",
 		});
-		console.log(data);
+
+		const res = await sendEmail({ formData: data });
+		if (!res)
+			errorToast(
+				"No se ha podido enviar el correo. Prueba de nuevo más tarde."
+			);
+		redirect("/mensaje-enviado");
 	};
 
 	return (
@@ -125,9 +135,9 @@ export default function ContactForm() {
 							return "Por favor introduce un email válido";
 						}
 					}}
-					label='Email'
+					label='email'
 					labelPlacement='outside'
-					name='Email'
+					name='email'
 					placeholder='Introduce tu email'
 					type='email'
 					variant='underlined'

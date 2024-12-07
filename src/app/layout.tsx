@@ -6,6 +6,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import "./globals.css";
 import RenderNavbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,6 +64,7 @@ export default function RootLayout({
 					<div className='min-h-screen'>{children}</div>
 					<Footer />
 				</NextUIProvider>
+				<ToastContainer />
 			</body>
 		</html>
 	);
