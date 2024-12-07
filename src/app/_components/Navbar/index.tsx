@@ -27,7 +27,7 @@ export default function RenderNavbar() {
 
 			<NavbarContent justify='end'>
 				<NavbarItem>
-					<Button as={Link} color='danger' href='/contacto' variant='flat'>
+					<Button as={Link} color='secondary' href='/contacto' variant='solid'>
 						Contacto
 					</Button>
 				</NavbarItem>

@@ -1,5 +1,4 @@
 import ContactBlock from "../ContactBlock";
-import Footer from "../Footer";
 import Faqs from "./Faqs";
 import Services from "./Services";
 import FirstSection from "./Value";
@@ -40,7 +39,6 @@ export default function MainPage() {
 					<Faqs />
 				</section>
 			</div>
-			<Footer />
 		</div>
 	);
 }
