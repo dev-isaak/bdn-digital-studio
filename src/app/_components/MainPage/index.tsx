@@ -1,3 +1,4 @@
+import ContactBlock from "../ContactBlock";
 import Footer from "../Footer";
 import Faqs from "./Faqs";
 import Services from "./Services";
@@ -29,8 +30,11 @@ export default function MainPage() {
 				<section>
 					<FirstSection />
 				</section>
-				<section>
+				<section className='overflow-hidden '>
 					<Services />
+				</section>
+				<section>
+					<ContactBlock />
 				</section>
 				<section>
 					<Faqs />

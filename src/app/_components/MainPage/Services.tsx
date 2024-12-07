@@ -3,6 +3,7 @@ import { Image } from "@nextui-org/image";
 import { Button } from "@nextui-org/react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Services() {
 	return (
@@ -59,9 +60,6 @@ const RenderColumnText = ({
 }: RenderColumnTextProps) => {
 	return (
 		<div
-			// initial={{ opacity: 0 }}
-			// whileInView={{ opacity: 1 }}
-			// transition={{ duration: 0.5, delay: 0, ease: "easeIn" }}
 			className={`max-w-4xl m-auto grid grid-cols-1 md:grid-cols-2 p-4 ${
 				revert ? "md:[direction:rtl]" : ""
 			}`}>
@@ -73,6 +71,8 @@ const RenderColumnText = ({
 				<h4 className='text-2xl text-default-900 font-semibold'>{title}</h4>
 				<p className='mt-4'>{text}</p>
 				<Button
+					as={Link}
+					href='#'
 					color='primary'
 					size='md'
 					radius='sm'
