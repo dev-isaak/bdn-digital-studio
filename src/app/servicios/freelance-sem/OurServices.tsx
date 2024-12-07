@@ -1,3 +1,5 @@
+import TwoBlockCard from "../components/TwoBlockCard";
+
 export default function OurServices() {
 	const content = [
 		{
@@ -16,16 +18,7 @@ export default function OurServices() {
 	return (
 		<>
 			{content.map((item, index) => (
-				<div
-					key={index}
-					className='grid grid-cols-1 md:grid-cols-[1fr_2fr] md:gap-6 p-4'>
-					<div className='p-4'>
-						<h3 className='text-2xl'>{item.title}</h3>
-					</div>
-					<div className='p-4'>
-						<p>{item.text}</p>
-					</div>
-				</div>
+				<TwoBlockCard key={index} title={item.title} text={item.text} />
 			))}
 		</>
 	);
