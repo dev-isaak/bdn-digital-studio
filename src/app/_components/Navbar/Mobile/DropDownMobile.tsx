@@ -33,6 +33,14 @@ export default function DropDownMobile() {
 							<Link
 								className='w-full text-base'
 								color='foreground'
+								href='/servicios/freelance-desarrollo-web'>
+								Desarrollo Web
+							</Link>
+						</ListboxItem>
+						<ListboxItem className='mt-4'>
+							<Link
+								className='w-full text-base'
+								color='foreground'
 								href='/servicios/freelance-optimizacion-web'>
 								Optimización Web
 							</Link>
