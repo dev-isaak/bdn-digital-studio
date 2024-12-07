@@ -18,7 +18,7 @@ export default function CardWithTopNumber({ number, title, text }: CardProps) {
 				</div>
 			</CardHeader>
 			<CardBody>
-				<p>{text}</p>
+				<div dangerouslySetInnerHTML={{ __html: text }}></div>
 			</CardBody>
 		</Card>
 	);

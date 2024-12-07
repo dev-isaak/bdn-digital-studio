@@ -1,5 +1,4 @@
-"use client";
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import RenderAccordion from "../RenderAccordion";
 
 export default function Faqs() {
 	const faqData = [
@@ -60,21 +59,5 @@ export default function Faqs() {
 		},
 	];
 
-	return (
-		<div className='m-auto max-w-3xl'>
-			<Accordion
-				variant='shadow'
-				selectionMode='single'
-				itemClasses={{ title: "text-gray-900 font-medium" }}>
-				{faqData.map((data, index) => (
-					<AccordionItem
-						key={index}
-						title={data.question}
-						aria-label={data.question}>
-						<p className='ml-4'>{data.answer}</p>
-					</AccordionItem>
-				))}
-			</Accordion>
-		</div>
-	);
+	return <RenderAccordion data={faqData} />;
 }
