@@ -59,7 +59,7 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<NextUIProvider>
 					<RenderNavbar />
-					<div className='min-h-screen p-2'>{children}</div>
+					<div className='min-h-screen'>{children}</div>
 				</NextUIProvider>
 			</body>
 		</html>
