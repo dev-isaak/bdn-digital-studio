@@ -10,10 +10,18 @@ export function getApiUrl() {
 
 	// En el servidor, usamos las cabeceras para obtener el host
 	if (typeof window === "undefined") {
-		const headersList = headers();
-		const host = headersList.get("host");
-		const protocol = isProduction ? "https" : "http";
-		return `${protocol}://${host}`;
+		// Verifica si headers() está disponible en el contexto
+		try {
+			const headersList = headers();
+			const host = headersList.get("host");
+			const protocol = isProduction ? "https" : "http";
+			return `${protocol}://${host}`;
+		} catch (error) {
+			// En caso de que no sea posible obtener los headers, retorna la URL por defecto
+			return isProduction
+				? "https://bdndigitalstudio.com"
+				: "http://localhost:3000";
+		}
 	}
 
 	// En el cliente, asumimos que usamos rutas relativas
