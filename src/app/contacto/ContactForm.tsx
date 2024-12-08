@@ -78,7 +78,6 @@ export default function ContactForm() {
 			description: "",
 		});
 
-		// const res = await sendEmail({ formData: data });
 		const res = await fetch("/api/send-email", {
 			method: "POST",
 			headers: {
@@ -86,7 +85,7 @@ export default function ContactForm() {
 			},
 			body: JSON.stringify(data),
 		});
-		console.log("respuesta: ", res);
+
 		if (!res)
 			errorToast(
 				"No se ha podido enviar el correo. Prueba de nuevo más tarde."
