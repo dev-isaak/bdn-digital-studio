@@ -9,7 +9,7 @@ export async function generateMetadata({
 }) {
 	const slug = params.slug;
 	const res = await fetch(
-		`http://localhost:3000/api/get-post?slug=${encodeURIComponent(slug)}`,
+		`${API_URL}/api/get-post?slug=${encodeURIComponent(slug)}`,
 		{
 			method: "GET",
 			headers: {
