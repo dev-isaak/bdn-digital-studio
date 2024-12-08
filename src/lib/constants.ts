@@ -1,4 +1,13 @@
 export const EXAMPLE_PATH = "blog-starter";
 export const CMS_NAME = "Markdown";
-// export const API_URL = 'http://localhost:3000'
-export const API_URL = 'https://bdndigitalstudio.com'
+
+let API_URL = '';
+const env = process.env.NODE_ENV;
+
+if (env === "development") {
+  API_URL = 'http://localhost:3000';
+} else if (env === "production") {
+  API_URL = 'https://bdndigitalstudio.com';
+}
+
+export default API_URL;
