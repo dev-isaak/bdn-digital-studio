@@ -42,6 +42,11 @@ export default function DropDownDesktop() {
 					</Link>
 				</DropdownItem>
 				<DropdownItem key='optimizacion_web'>
+					<Link color='foreground' href='/servicios/freelance-desarrollo-web'>
+						Desarrollo Web
+					</Link>
+				</DropdownItem>
+				<DropdownItem key='optimizacion_web'>
 					<Link color='foreground' href='/servicios/freelance-optimizacion-web'>
 						Optimización Web
 					</Link>

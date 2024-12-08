@@ -12,7 +12,7 @@ import MobileMenu from "./Mobile/MobileMenu";
 
 export default function RenderNavbar() {
 	return (
-		<Navbar isBordered shouldHideOnScroll>
+		<Navbar isBordered shouldHideOnScroll className='fixed'>
 			<NavbarContent className='sm:hidden' justify='start'>
 				<NavbarMenuToggle />
 			</NavbarContent>
@@ -27,7 +27,7 @@ export default function RenderNavbar() {
 
 			<NavbarContent justify='end'>
 				<NavbarItem>
-					<Button as={Link} color='danger' href='/contacto' variant='flat'>
+					<Button as={Link} color='secondary' href='/contacto' variant='solid'>
 						Contacto
 					</Button>
 				</NavbarItem>
