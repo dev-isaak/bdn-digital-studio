@@ -1,3 +1,11 @@
+export const metadata = {
+	alternates: {
+		canonical: `https://bdndigitalstudio.com/politica-de-privacidad`,
+	},
+	title: `Política de Privacidad | BDN Digital Studio`,
+	description: `Conoce la política de privacidad de BDN Digital Studio. Descubre cómo protegemos tus datos y garantizamos su seguridad al interactuar con nuestros servicios digitales. Tu privacidad es nuestra prioridad.`,
+};
+
 export default function PoliticaDePrivacidad() {
 	return (
 		<main className='mt-20 p-2 pb-8 md:px-8'>

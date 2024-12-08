@@ -6,7 +6,7 @@ export default function Footer() {
 		},
 		{
 			text: "Política de cookies",
-			href: "/cookies-policy",
+			href: "/politica-de-cookies",
 		},
 	];
 
