@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
 import { Form, Input, Checkbox, Button, Textarea } from "@nextui-org/react";
-import { sendEmail } from "../services/email";
 import "react-toastify/dist/ReactToastify.css";
 import { errorToast } from "../_components/toastify";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface ErrorProps {
 	name: string;
@@ -24,6 +23,7 @@ interface ErrorProps {
 }
 
 export default function ContactForm() {
+	const router = useRouter();
 	const [errors, setErrors] = React.useState({
 		name: "",
 		lastname: "",
@@ -78,12 +78,20 @@ export default function ContactForm() {
 			description: "",
 		});
 
-		const res = await sendEmail({ formData: data });
+		// const res = await sendEmail({ formData: data });
+		const res = await fetch("/api/send-email", {
+			method: "POST",
+			headers: {
+				"content-type": "application/json",
+			},
+			body: JSON.stringify(data),
+		});
+		console.log("respuesta: ", res);
 		if (!res)
 			errorToast(
 				"No se ha podido enviar el correo. Prueba de nuevo más tarde."
 			);
-		redirect("/mensaje-enviado");
+		router.push("/mensaje-enviado");
 	};
 
 	return (
