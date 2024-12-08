@@ -15,8 +15,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
-  console.log(req.body)
-  const { name, lastname, email, message, telf, web, description } = req.body;
+  const { name, lastname, email, message, telf, web } = req.body;
 
   const studioEmailPromise = emailToStudioAfterContact({
     resend,

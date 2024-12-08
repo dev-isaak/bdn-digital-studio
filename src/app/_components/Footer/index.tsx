@@ -2,11 +2,11 @@ export default function Footer() {
 	const legalRoutes = [
 		{
 			text: "Política de privacidad",
-			href: "/privacy-policy",
+			href: "/politica-de-privacidad",
 		},
 		{
 			text: "Política de cookies",
-			href: "/cookies-policy",
+			href: "/politica-de-cookies",
 		},
 	];
 
