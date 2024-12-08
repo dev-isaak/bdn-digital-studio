@@ -1,5 +1,5 @@
 import ContactBlock from "@/app/_components/ContactBlock";
-import { API_URL } from "@/lib/constants";
+import { getApiUrl } from "@/lib/getApiUrl";
 import { Card, CardHeader, Image } from "@nextui-org/react";
 
 export async function generateMetadata({
@@ -9,7 +9,7 @@ export async function generateMetadata({
 }) {
 	const slug = params.slug;
 	const res = await fetch(
-		`${API_URL}/api/get-post?slug=${encodeURIComponent(slug)}`,
+		`${getApiUrl()}/api/get-post?slug=${encodeURIComponent(slug)}`,
 		{
 			method: "GET",
 			headers: {
@@ -41,7 +41,7 @@ export async function generateMetadata({
 export default async function Page({ params }: any) {
 	const slug = params.slug;
 	const res = await fetch(
-		`${API_URL}/api/get-post?slug=${encodeURIComponent(slug)}`,
+		`${getApiUrl()}/api/get-post?slug=${encodeURIComponent(slug)}`,
 		{
 			cache: "force-cache",
 			method: "GET",
