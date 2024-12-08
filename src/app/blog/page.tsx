@@ -31,6 +31,12 @@ export default async function Blog() {
 		},
 	});
 
+	if (!res) {
+		return {
+			notFound: true,
+		};
+	}
+
 	const { nodes } = await res.json();
 	const posts = nodes;
 

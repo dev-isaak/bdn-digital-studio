@@ -40,40 +40,45 @@ export async function generateMetadata({
 
 export default async function Page({ params }: any) {
 	const slug = params.slug;
-	// const res = await fetch(
-	// 	`${API_URL}/api/get-post?slug=${encodeURIComponent(slug)}`,
-	// 	{
-	// 		cache: "force-cache",
-	// 		method: "GET",
-	// 		headers: {
-	// 			"content-type": "application/json",
-	// 		},
-	// 	}
-	// );
-	// let {
-	// 	post: {
-	// 		content,
-	// 		title,
-	// 		featuredImage: {
-	// 			node: { altText, mediaItemUrl },
-	// 		},
-	// 	},
-	// } = await res.json();
-	// console.log(", respuesta: ", post.content);
+	const res = await fetch(
+		`${API_URL}/api/get-post?slug=${encodeURIComponent(slug)}`,
+		{
+			cache: "force-cache",
+			method: "GET",
+			headers: {
+				"content-type": "application/json",
+			},
+		}
+	);
+	if (!res) {
+		return {
+			notFound: true,
+		};
+	}
+
+	let {
+		post: {
+			content,
+			title,
+			featuredImage: {
+				node: { altText, mediaItemUrl },
+			},
+		},
+	} = await res.json();
 
 	return (
 		<>
 			<Card radius='none' className='h-96 relative'>
 				<div className='absolute inset-0 bg-black opacity-50 z-10'></div>
 
-				{/* <CardHeader className='h-96 absolute flex flex-col justify-center align-middle text-center gap-10 z-20'>
+				<CardHeader className='h-96 absolute flex flex-col justify-center align-middle text-center gap-10 z-20'>
 					<div>
 						<h1 className='uppercase xs:text-4xl md:text-4xl text-white font-bold'>
 							{title}
 						</h1>
 					</div>
-				</CardHeader> */}
-				{/* 
+				</CardHeader>
+
 				<Image
 					radius='none'
 					height={500}
@@ -81,15 +86,15 @@ export default async function Page({ params }: any) {
 					alt={altText}
 					className='z-0 w-full h-full object-cover'
 					src={mediaItemUrl}
-				/> */}
+				/>
 			</Card>
 
 			<section className=''>
-				{/* <div>
+				<div>
 					<div
 						id='blog-post'
 						dangerouslySetInnerHTML={{ __html: content }}></div>
-				</div> */}
+				</div>
 			</section>
 			<section className='max-w-[1000px] my-6 md:my-10 mx-1 md:m-auto'>
 				<ContactBlock />
