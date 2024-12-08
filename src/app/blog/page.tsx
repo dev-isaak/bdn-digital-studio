@@ -23,26 +23,25 @@ const truncateText = (text: any, maxLength: any) => {
 };
 
 export default async function Blog() {
-	// const res = await fetch(`${API_URL}/api/get-posts`, {
-	// 	cache: "force-cache",
-	// 	method: "GET",
-	// 	headers: {
-	// 		"content-type": "application/json",
-	// 	},
-	// });
+	const res = await fetch(`${API_URL}/api/get-posts`, {
+		cache: "force-cache",
+		method: "GET",
+		headers: {
+			"content-type": "application/json",
+		},
+	});
 
-	// const { nodes } = await res.json();
-	// const posts = nodes;
+	const { nodes } = await res.json();
+	const posts = nodes;
 
 	return (
 		<section className='mt-28 p-2 md:px-10'>
 			<h1 className='mb-4 text-center text-4xl font-semibold'>Blog</h1>
-			{/* {posts.map((post: any, index: number) => (
+			{posts.map((post: any, index: number) => (
 				<Card
 					key={index}
 					isFooterBlurred
 					className='w-[300px] h-[400px] col-span-12 sm:col-span-5 relative'>
-					
 					<CardHeader className='absolute z-20 top-1 flex-col items-start'>
 						<h4 className='text-white font-medium text-2xl'>{post.title}</h4>
 					</CardHeader>
@@ -74,7 +73,7 @@ export default async function Blog() {
 						</Button>
 					</CardFooter>
 				</Card>
-			))} */}
+			))}
 		</section>
 	);
 }
