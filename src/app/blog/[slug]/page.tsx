@@ -18,7 +18,7 @@ export async function generateMetadata({
 		}
 	);
 	const { post } = await res.json();
-	if (!post) return;
+
 	return {
 		alternates: {
 			canonical: `https://bdndigitalstudio.com/blog/${slug}`,
@@ -40,6 +40,7 @@ export async function generateMetadata({
 
 export default async function Page({ params }: any) {
 	const slug = params.slug;
+	console.log("FETCH DATA:", getApiUrl());
 	const res = await fetch(
 		`${getApiUrl()}/api/get-post?slug=${encodeURIComponent(slug)}`,
 		{
