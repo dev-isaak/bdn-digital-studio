@@ -2,7 +2,8 @@ import { wpquery } from '@/app/services/wordpress';
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type ResponseData = {
-  post: any
+  post?: any
+  message?: string
 }
 
 export default async function handler(
@@ -38,7 +39,7 @@ export default async function handler(
     });
     res.status(200).json({ post })
   } catch (error) {
-    console.log("Error enviando correos:", error);
-    return false
+    console.log("Error obteniendo el post de wordpress:", error);
+    res.status(500).json({ message: 'Error obteniendo los posts.' })
   }
 }

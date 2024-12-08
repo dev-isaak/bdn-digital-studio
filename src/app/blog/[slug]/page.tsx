@@ -1,4 +1,5 @@
 import ContactBlock from "@/app/_components/ContactBlock";
+import { API_URL } from "@/lib/constants";
 import { Card, CardHeader, Image } from "@nextui-org/react";
 
 export async function generateMetadata({
@@ -21,10 +22,6 @@ export async function generateMetadata({
 	return {
 		alternates: {
 			canonical: `https://bdndigitalstudio.com/blog/${slug}`,
-			languages: {
-				"en-US": "/en-US",
-				"de-DE": "/de-DE",
-			},
 		},
 		title: `${post.title} | BDN Digital Studio`,
 		description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
@@ -44,7 +41,7 @@ export async function generateMetadata({
 export default async function Page({ params }: any) {
 	const slug = params.slug;
 	const res = await fetch(
-		`http://localhost:3000/api/get-post?slug=${encodeURIComponent(slug)}`,
+		`${API_URL}/api/get-post?slug=${encodeURIComponent(slug)}`,
 		{
 			method: "GET",
 			headers: {

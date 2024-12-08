@@ -1,10 +1,17 @@
 import Heading from "@/app/_components/Heading";
 import TwoBlockGrid from "../components/TwoBlockGrid";
 import { Image } from "@nextui-org/react";
-import TwoBlockCard from "../components/TwoBlockCard";
 import WhyUs from "./WhyUs";
 import ContactBlock from "@/app/_components/ContactBlock";
 import Faq from "./Faq";
+
+export const metadata = {
+	alternates: {
+		canonical: `https://bdndigitalstudio.com/servicios/freelance-optimizacion-web`,
+	},
+	title: `Optimización Web Freelance | BDN Digital Studio`,
+	description: `Aumenta la velocidad y la eficiencia de tu sitio con nuestro servicio de optimización WordPress. En BDN Digital Studio, ajustamos plugins, temas y configuraciones para maximizar el rendimiento. Además, trabajamos con soluciones a medida en otros frameworks, como React o Astro, para garantizar una web rápida, segura y preparada para destacar en los resultados de búsqueda.`,
+};
 
 export default function WebOptimizacion() {
 	return (

@@ -1,5 +1,4 @@
-"use client";
-import React from "react";
+import { API_URL } from "@/lib/constants";
 import {
 	Button,
 	Card,
@@ -8,79 +7,63 @@ import {
 	Image,
 	Link,
 } from "@nextui-org/react";
-import { wpquery } from "@/app/services/wordpress";
-import { errorToast } from "@/app/_components/toastify";
+import { FaArrowRightLong } from "react-icons/fa6";
+
+export const metadata = {
+	alternates: {
+		canonical: `https://bdndigitalstudio.com/blog`,
+	},
+	title: `Blog | BDN Digital Studio`,
+	description: `En el blog de BDN Digital Studio encontrarás todas las noticias relacionadas con el mundo digital. SEO, desarrollo web, redes sociales... ¡Y mucho más! .`,
+};
 
 const truncateText = (text: any, maxLength: any) => {
 	if (!text) return "";
 	return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
 };
 
-const getPosts = async () => {
-	const {
-		posts: { nodes },
-	} = await wpquery({
-		query: `
-query GetPosts {
-  posts {
-    nodes {
-      id
-      slug
-      title
-      author {
-        node {
-          name
-        }
-      }
-      content
-      featuredImage {
-        node {
-          altText
-          mediaItemUrl
-        }
-      }
-    }
-  }
-}
-  `,
+export default async function Blog() {
+	const res = await fetch(`${API_URL}/api/get-posts`, {
+		method: "GET",
+		headers: {
+			"content-type": "application/json",
+		},
 	});
-	return nodes;
-};
 
-export default function Blog() {
-	const [posts, setPosts] = React.useState([]);
-
-	React.useEffect(() => {
-		getPosts()
-			.then((posts) => setPosts(posts))
-			.catch((e) =>
-				errorToast(
-					"No se han podido recuperar los post. Prueba de nuevo más tarde."
-				)
-			);
-	}, []);
+	const { nodes } = await res.json();
+	const posts = nodes;
 
 	return (
 		<section className='mt-28 p-2 md:px-10'>
 			<h1 className='mb-4 text-center text-4xl font-semibold'>Blog</h1>
-			{posts.map((post: any) => (
+			{posts.map((post: any, index: number) => (
 				<Card
+					key={index}
 					isFooterBlurred
-					className='w-[300px] h-[400px] col-span-12 sm:col-span-5'>
-					<CardHeader className='absolute z-10 top-1 flex-col items-start'>
-						{/* <p className="text-tiny text-white/60 uppercase font-bold">{post.title}</p> */}
-						<h4 className='text-black font-medium text-2xl'>{post.title}</h4>
+					className='w-[300px] h-[400px] col-span-12 sm:col-span-5 relative'>
+					{/* Header */}
+					<CardHeader className='absolute z-20 top-1 flex-col items-start'>
+						<h4 className='text-white font-medium text-2xl'>{post.title}</h4>
 					</CardHeader>
-					<Image
-						removeWrapper
-						alt={post.featuredImage.node.altText}
-						className='z-0 w-full h-full scale-125 -translate-y-6 object-cover'
-						src={post.featuredImage.node.mediaItemUrl}
-					/>
-					<CardFooter className='absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between'>
+
+					{/* Imagen con overlay */}
+					<div className='relative w-full h-full overflow-hidden'>
+						{/* Imagen */}
+						<Image
+							removeWrapper
+							alt={post.featuredImage.node.altText}
+							className='z-0 w-full h-full scale-125 -translate-y-6 object-cover'
+							src={post.featuredImage.node.mediaItemUrl}
+						/>
+						{/* Overlay */}
+						<div className='absolute inset-0 bg-gray-900 opacity-40 z-10'></div>
+					</div>
+
+					{/* Footer */}
+					<CardFooter className='absolute flex-col gap-4 bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-20 justify-between'>
 						<div>
 							<p className='text-black text-tiny'>
-								{truncateText(post.content.replace(/(<([^>]+)>)/gi, ""), 100)}
+								{truncateText(post.content.replace(/(<([^>]+)>)/gi, ""), 185)}
 							</p>
 						</div>
 						<Button
@@ -88,8 +71,8 @@ export default function Blog() {
 							href={`/blog/${post.slug}`}
 							className='text-tiny'
 							color='primary'
-							radius='full'
-							size='sm'>
+							endContent={<FaArrowRightLong />}
+							size='md'>
 							Ir al post
 						</Button>
 					</CardFooter>
