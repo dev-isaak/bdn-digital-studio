@@ -38,7 +38,7 @@ export async function generateMetadata({
 	};
 }
 
-export async function getStaticProps({ params }: any) {
+export default async function Page({ params }: any) {
 	const slug = params.slug;
 	const res = await fetch(
 		`${API_URL}/api/get-post?slug=${encodeURIComponent(slug)}`,

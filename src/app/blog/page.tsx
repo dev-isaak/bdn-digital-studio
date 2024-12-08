@@ -22,7 +22,7 @@ const truncateText = (text: any, maxLength: any) => {
 	return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
 };
 
-export async function getStaticProps() {
+export default async function Blog() {
 	const res = await fetch(`${API_URL}/api/get-posts`, {
 		cache: "force-cache",
 		method: "GET",
