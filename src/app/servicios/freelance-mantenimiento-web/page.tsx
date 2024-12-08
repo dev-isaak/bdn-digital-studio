@@ -5,6 +5,14 @@ import WhatWeOffer from "./WhatWeOffer";
 import Faq from "./Faq";
 import ContactBlock from "@/app/_components/ContactBlock";
 
+export const metadata = {
+	alternates: {
+		canonical: `https://bdndigitalstudio.com/servicios/freelance-mantenimiento-web`,
+	},
+	title: `Mantenimiento Web Freelance | BDN Digital Studio`,
+	description: `Mantén tu web segura y optimizada con el servicio de mantenimiento WordPress de BDN Digital Studio. Nos encargamos de actualizaciones, copias de seguridad, protección contra malware y optimización constante del rendimiento. Con nuestro soporte técnico especializado, garantizamos que tu sitio funcione perfectamente y esté siempre actualizado. ¡Deja tu web en manos de expertos!`,
+};
+
 export default function MaintenaceWeb() {
 	return (
 		<div className='flex flex-col gap-10 mb-10'>

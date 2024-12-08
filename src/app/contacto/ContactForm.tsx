@@ -5,6 +5,14 @@ import "react-toastify/dist/ReactToastify.css";
 import { errorToast } from "../_components/toastify";
 import { useRouter } from "next/navigation";
 
+export const metadata = {
+	alternates: {
+		canonical: `https://bdndigitalstudio.com/contacto`,
+	},
+	title: `Contacto | BDN Digital Studio`,
+	description: `Contáctanos en BDN Digital Studio, expertos en desarrollo web, mantenimiento, SEO, SEM y gestión de redes sociales. Descubre cómo podemos impulsar tu negocio con soluciones digitales personalizadas. ¡No te lo pienses!`,
+};
+
 interface ErrorProps {
 	name: string;
 	lastname: string;
@@ -78,7 +86,6 @@ export default function ContactForm() {
 			description: "",
 		});
 
-		// const res = await sendEmail({ formData: data });
 		const res = await fetch("/api/send-email", {
 			method: "POST",
 			headers: {
@@ -86,7 +93,7 @@ export default function ContactForm() {
 			},
 			body: JSON.stringify(data),
 		});
-		console.log("respuesta: ", res);
+
 		if (!res)
 			errorToast(
 				"No se ha podido enviar el correo. Prueba de nuevo más tarde."

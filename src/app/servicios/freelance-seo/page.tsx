@@ -7,6 +7,14 @@ import TwoBlockGrid from "../components/TwoBlockGrid";
 import AtreveteSection from "./AtreveteSection";
 import ServiciosSection from "./ServiciosSection";
 
+export const metadata = {
+	alternates: {
+		canonical: `https://bdndigitalstudio.com/servicios/freelance-seo`,
+	},
+	title: `Agencia Freelance SEO | BDN Digital Studio`,
+	description: `Impulsamos tu presencia digital con estrategias avanzadas de SEO y SEM. Mejoramos el posicionamiento orgánico de tu web en buscadores y gestionamos campañas publicitarias para maximizar tu alcance. Ya sea tráfico orgánico o de pago, diseñamos soluciones personalizadas para atraer más visitantes y aumentar tus conversiones.`,
+};
+
 export default function SEO() {
 	return (
 		<div className='flex flex-col gap-10 mb-10'>

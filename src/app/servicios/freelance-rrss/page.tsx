@@ -6,6 +6,14 @@ import OurServices from "./OurServices";
 import Faq from "./Faq";
 import ContactBlock from "@/app/_components/ContactBlock";
 
+export const metadata = {
+	alternates: {
+		canonical: `https://bdndigitalstudio.com/servicios/freelance-rrss`,
+	},
+	title: `Gestión de Redes Sociales | BDN Digital Studio`,
+	description: `Gestionamos tus redes sociales de manera estratégica para conectar con tu audiencia y potenciar tu marca. Creamos contenido atractivo, optimizamos publicaciones y analizamos resultados para garantizar un crecimiento constante en tus plataformas digitales. Con nuestras estrategias, convertimos seguidores en clientes fieles.`,
+};
+
 export default function RRSS() {
 	return (
 		<div className='flex flex-col gap-10 mb-10'>

@@ -7,6 +7,14 @@ import HowWeWork from "./HowWeWork";
 import Faq from "./Faq";
 import ContactBlock from "@/app/_components/ContactBlock";
 
+export const metadata = {
+	alternates: {
+		canonical: `https://bdndigitalstudio.com/servicios/freelance-desarrollo-web`,
+	},
+	title: `Desarrollo Web Freelance | BDN Digital Studio`,
+	description: `En BDN Digital Studio, ofrecemos soluciones de desarrollo web en Barcelona, desde sitios en WordPress hasta proyectos personalizados con tecnologías como React y Astro. Creamos páginas atractivas, funcionales y adaptadas a tus necesidades. Nuestro enfoque combina diseño, rendimiento y tecnología avanzada para garantizar una presencia online de alto impacto. ¡Haz realidad tu proyecto con nosotros!`,
+};
+
 export default function WebDevelopment() {
 	return (
 		<div className='flex flex-col gap-10 mb-10'>

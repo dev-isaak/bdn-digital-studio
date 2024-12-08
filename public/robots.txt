@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bdndigitalstudio.com/sitemap-index.xml
