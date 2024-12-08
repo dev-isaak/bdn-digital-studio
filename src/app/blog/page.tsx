@@ -7,7 +7,7 @@ import {
 	Link,
 } from "@nextui-org/react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { getApiUrl } from "@/lib/getApiUrl";
+import { getPosts } from "./data";
 
 export const metadata = {
 	alternates: {
@@ -22,23 +22,8 @@ const truncateText = (text: any, maxLength: any) => {
 	return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
 };
 
-export default async function Blog() {
-	const res = await fetch(`${getApiUrl()}/api/get-posts`, {
-		cache: "force-cache",
-		method: "GET",
-		headers: {
-			"content-type": "application/json",
-		},
-	});
-
-	if (!res) {
-		return {
-			notFound: true,
-		};
-	}
-
-	const { nodes } = await res.json();
-	const posts = nodes;
+export default async function BackupBlog() {
+	const posts = await getPosts();
 
 	return (
 		<section className='mt-28 p-2 md:px-10'>

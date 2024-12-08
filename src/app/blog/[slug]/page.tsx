@@ -1,27 +1,17 @@
 import ContactBlock from "@/app/_components/ContactBlock";
-import { getApiUrl } from "@/lib/getApiUrl";
 import { Card, CardHeader, Image } from "@nextui-org/react";
+import { getPost } from "../data";
 
 export async function generateMetadata({
 	params,
 }: {
 	params: { slug: string };
 }) {
-	const slug = params.slug;
-	const res = await fetch(
-		`${getApiUrl()}/api/get-post?slug=${encodeURIComponent(slug)}`,
-		{
-			method: "GET",
-			headers: {
-				"content-type": "application/json",
-			},
-		}
-	);
-	const { post } = await res.json();
+	const post: any = await getPost(params.slug);
 
 	return {
 		alternates: {
-			canonical: `https://bdndigitalstudio.com/blog/${slug}`,
+			canonical: `https://bdndigitalstudio.com/blog/${params.slug}`,
 		},
 		title: `${post.title} | BDN Digital Studio`,
 		description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
@@ -40,32 +30,13 @@ export async function generateMetadata({
 
 export default async function Page({ params }: any) {
 	const slug = params.slug;
-	console.log("FETCH DATA:", getApiUrl());
-	const res = await fetch(
-		`${getApiUrl()}/api/get-post?slug=${encodeURIComponent(slug)}`,
-		{
-			cache: "force-cache",
-			method: "GET",
-			headers: {
-				"content-type": "application/json",
-			},
-		}
-	);
-	if (!res) {
-		return {
-			notFound: true,
-		};
-	}
-
-	let {
-		post: {
-			content,
-			title,
-			featuredImage: {
-				node: { altText, mediaItemUrl },
-			},
+	const {
+		title,
+		content,
+		featuredImage: {
+			node: { altText, mediaItemUrl },
 		},
-	} = await res.json();
+	} = await getPost(slug);
 
 	return (
 		<>
