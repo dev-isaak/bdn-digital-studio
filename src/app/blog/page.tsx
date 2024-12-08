@@ -23,6 +23,7 @@ const truncateText = (text: any, maxLength: any) => {
 };
 
 export default async function Blog() {
+	console.log("CONSOLE TEST: ", API_URL);
 	const res = await fetch(`${API_URL}/api/get-posts`, {
 		cache: "force-cache",
 		method: "GET",
