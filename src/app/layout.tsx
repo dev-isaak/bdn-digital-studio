@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
-
 import "./globals.css";
 import RenderNavbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
 import { ToastContainer } from "react-toastify";
+import BannerCookies from "./_components/Cookies/Banner";
+import GoogleAnalytics from "./_components/Cookies/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
 	return (
 		<html lang='es'>
 			<head>
+				<GoogleAnalytics GA_MEASUREMENT_ID='G-T4Q6M9THJY' />
 				<link rel='shortcut icon' href='/favicon/favicon.ico' />
 				<meta name='msapplication-TileColor' content='#000000' />
 				<meta
@@ -44,6 +46,7 @@ export default function RootLayout({
 					<Footer />
 				</NextUIProvider>
 				<ToastContainer />
+				<BannerCookies />
 			</body>
 		</html>
 	);
