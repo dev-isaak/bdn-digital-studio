@@ -8,6 +8,7 @@ import {
 } from "@nextui-org/react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { getPosts } from "./data";
+import { WordPressPostProps } from "@/interfaces/wp_post";
 
 export const metadata = {
 	alternates: {
@@ -17,7 +18,7 @@ export const metadata = {
 	description: `En el blog de BDN Digital Studio encontrarás todas las noticias relacionadas con el mundo digital. SEO, desarrollo web, redes sociales... ¡Y mucho más! .`,
 };
 
-const truncateText = (text: any, maxLength: any) => {
+const truncateText = (text: string, maxLength: number) => {
 	if (!text) return "";
 	return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
 };
@@ -28,7 +29,7 @@ export default async function BackupBlog() {
 	return (
 		<section className='mt-28 p-2 md:px-10'>
 			<h1 className='mb-4 text-center text-4xl font-semibold'>Blog</h1>
-			{posts.map((post: any, index: number) => (
+			{posts.map((post: WordPressPostProps, index: number) => (
 				<Card
 					key={index}
 					isFooterBlurred
