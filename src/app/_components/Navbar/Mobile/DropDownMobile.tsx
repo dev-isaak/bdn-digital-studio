@@ -15,7 +15,7 @@ export default function DropDownMobile() {
 					<Listbox>
 						<ListboxItem>
 							<Link
-								className='w-full text-base'
+								className='w-full text-lg'
 								color='foreground'
 								href='/servicios/freelance-seo'>
 								Posicionamiento SEO
@@ -23,7 +23,7 @@ export default function DropDownMobile() {
 						</ListboxItem>
 						<ListboxItem className='mt-4'>
 							<Link
-								className='w-full text-base'
+								className='w-full text-lg'
 								color='foreground'
 								href='/servicios/freelance-sem'>
 								Posicionamiento SEM
@@ -31,7 +31,7 @@ export default function DropDownMobile() {
 						</ListboxItem>
 						<ListboxItem className='mt-4'>
 							<Link
-								className='w-full text-base'
+								className='w-full text-lg'
 								color='foreground'
 								href='/servicios/freelance-desarrollo-web'>
 								Desarrollo Web
@@ -39,7 +39,7 @@ export default function DropDownMobile() {
 						</ListboxItem>
 						<ListboxItem className='mt-4'>
 							<Link
-								className='w-full text-base'
+								className='w-full text-lg'
 								color='foreground'
 								href='/servicios/freelance-optimizacion-web'>
 								Optimización Web
@@ -47,7 +47,7 @@ export default function DropDownMobile() {
 						</ListboxItem>
 						<ListboxItem className='mt-4'>
 							<Link
-								className='w-full text-base'
+								className='w-full text-lg'
 								color='foreground'
 								href='/servicios/freelance-mantenimiento-web'>
 								Mantenimiento Web
@@ -55,7 +55,7 @@ export default function DropDownMobile() {
 						</ListboxItem>
 						<ListboxItem className='mt-4'>
 							<Link
-								className='w-full text-base'
+								className='w-full text-lg'
 								color='foreground'
 								href='/servicios/freelance-rrss'>
 								Redes Sociales

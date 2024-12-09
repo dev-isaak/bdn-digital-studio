@@ -7,9 +7,9 @@ export default function Contacto() {
 			<Card radius='none' className='h-96'>
 				<CardHeader className='h-96 absolute flex flex-col justify-center align-middle text-center gap-10'>
 					<div>
-						<span className='uppercase xs:text-4xl md:text-8xl text-white font-bold'>
+						<h1 className='uppercase text-6xl md:text-8xl text-white font-bold'>
 							Contacto
-						</span>
+						</h1>
 					</div>
 				</CardHeader>
 				<Image
@@ -21,7 +21,7 @@ export default function Contacto() {
 					src='/assets/images/building4.webp'
 				/>
 			</Card>
-			<section>
+			<section className='mx-2'>
 				<ContactForm />
 			</section>
 		</>

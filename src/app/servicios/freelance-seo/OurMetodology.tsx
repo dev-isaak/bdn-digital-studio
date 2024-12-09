@@ -5,8 +5,11 @@ import { FaRegChartBar } from "react-icons/fa";
 import { FaBolt } from "react-icons/fa";
 import { motion } from "motion/react";
 import { Card, CardBody, CardHeader } from "@nextui-org/react";
+import useWindowSize from "@/hooks/useWindowSize";
 
 export default function OurMetodology() {
+	const { isMobile } = useWindowSize();
+
 	const nuestraMetodologia = [
 		{
 			title: "Auditoría",
@@ -35,13 +38,15 @@ export default function OurMetodology() {
 		<div className='flex flex-col gap-4 items-center my-6'>
 			{nuestraMetodologia.map((item, index) => (
 				<motion.div
+					key={index}
 					initial={{ x: item.isOdd ? 400 : -400 }}
 					whileInView={{ x: 0 }}
 					transition={{ duration: 0.5, ease: "easeInOut" }}>
 					<Card
-						key={index}
-						className={`max-w-xl ${
-							item.isOdd ? "translate-x-5" : "-translate-x-5"
+						className={`${
+							isMobile
+								? ""
+								: `max-w-xl ${item.isOdd ? "translate-x-5" : "-translate-x-5"}`
 						}`}>
 						<CardHeader>
 							{item.icon}
