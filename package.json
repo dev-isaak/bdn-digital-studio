@@ -2,6 +2,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next",
+		"clean": "rimraf .next",
 		"build": "next build",
 		"start": "next start"
 	},
@@ -24,6 +25,7 @@
 		"@types/react-dom": "^19.0.1",
 		"autoprefixer": "^10.0.1",
 		"postcss": "^8",
+		"rimraf": "^6.0.1",
 		"tailwindcss": "^3.3.0",
 		"typescript": "^5"
 	}

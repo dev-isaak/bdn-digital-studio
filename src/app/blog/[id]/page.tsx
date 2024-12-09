@@ -1,18 +1,14 @@
-import ContactBlock from "@/app/_components/ContactBlock";
 import { Card, CardHeader, Image } from "@nextui-org/react";
+import ContactBlock from "../../_components/ContactBlock";
+import { WordPressPostProps } from "../../../interfaces/wp_post";
 import { getPost } from "../data";
-import { WordPressPostProps } from "@/interfaces/wp_post";
 
-export async function generateMetadata({
-	params,
-}: {
-	params: { slug: string };
-}) {
-	const post: WordPressPostProps = await getPost(params.slug);
+export async function generateMetadata({ params }: { params: { id: string } }) {
+	const post: WordPressPostProps = await getPost(params.id);
 
 	return {
 		alternates: {
-			canonical: `https://bdndigitalstudio.com/blog/${params.slug}`,
+			canonical: `https://bdndigitalstudio.com/blog/${params.id}`,
 		},
 		title: `${post.title} | BDN Digital Studio`,
 		description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
@@ -31,12 +27,12 @@ export async function generateMetadata({
 
 interface ParamsProps {
 	params: {
-		slug: string;
+		id: string;
 	};
 }
 
 export default async function Page({ params }: ParamsProps) {
-	const slug = params.slug;
+	const slug = params.id;
 	const {
 		title,
 		content,
