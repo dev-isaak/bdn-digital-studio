@@ -31,17 +31,14 @@ jobs:
       - name: Install step
         run: "npm install"
 
-      - name: Clean build directory
-        run: npm run clean
-
       - name: Build step
         run: "npm run build"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "isaac-bdn-digital-77"
+          project: "bdn-digital-studio"
           entrypoint: "jsr:@deno/nextjs-start"
           root: "."
-          include: .next, public
+          
           
