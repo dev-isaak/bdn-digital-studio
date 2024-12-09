@@ -16,10 +16,10 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        'primary': '#1A7D85',
-        'secondary': '#da6363',
-        'white-light': '#d6d6d6',
-        'white-strong': 'white',
+        primary: "#1A7D85",
+        secondary: "#da6363",
+        "white-light": "#d6d6d6",
+        "white-strong": "white",
       },
       spacing: {
         28: "7rem",

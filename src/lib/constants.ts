@@ -1,1 +1,1 @@
-export const HEADLESS_CMS_GQL = "https://pantalla-digital.com/graphql"
+export const HEADLESS_CMS_GQL = "https://pantalla-digital.com/graphql";
