@@ -3,40 +3,36 @@ import ContactBlock from "../../_components/ContactBlock";
 import { WordPressPostProps } from "../../../interfaces/wp_post";
 import { getPost } from "../data";
 
-// export async function generateMetadata({
-// 	params,
-// }: {
-// 	params: { slug: string };
-// }) {
-// 	const post: WordPressPostProps = await getPost(params.slug);
+export async function generateMetadata({ params }: { params: { id: string } }) {
+	const post: WordPressPostProps = await getPost(params.id);
 
-// 	return {
-// 		alternates: {
-// 			canonical: `https://bdndigitalstudio.com/blog/${params.slug}`,
-// 		},
-// 		title: `${post.title} | BDN Digital Studio`,
-// 		description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
-// 		openGraph: {
-// 			title: post.title,
-// 			description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
-// 			images: [
-// 				{
-// 					url: post.featuredImage?.node?.mediaItemUrl || "",
-// 					alt: post.featuredImage?.node?.altText || "Imagen del header",
-// 				},
-// 			],
-// 		},
-// 	};
-// }
+	return {
+		alternates: {
+			canonical: `https://bdndigitalstudio.com/blog/${params.id}`,
+		},
+		title: `${post.title} | BDN Digital Studio`,
+		description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
+		openGraph: {
+			title: post.title,
+			description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
+			images: [
+				{
+					url: post.featuredImage?.node?.mediaItemUrl || "",
+					alt: post.featuredImage?.node?.altText || "Imagen del header",
+				},
+			],
+		},
+	};
+}
 
 interface ParamsProps {
 	params: {
-		slug: string;
+		id: string;
 	};
 }
 
 export default async function Page({ params }: ParamsProps) {
-	const slug = params.slug;
+	const slug = params.id;
 	const {
 		title,
 		content,
@@ -47,8 +43,7 @@ export default async function Page({ params }: ParamsProps) {
 
 	return (
 		<>
-			<h1>test</h1>
-			{/* <Card radius='none' className='h-96 relative'>
+			<Card radius='none' className='h-96 relative'>
 				<div className='absolute inset-0 bg-black opacity-50 z-10'></div>
 
 				<CardHeader className='h-96 absolute flex flex-col justify-center align-middle text-center gap-10 z-20'>
@@ -78,7 +73,7 @@ export default async function Page({ params }: ParamsProps) {
 			</section>
 			<section className='max-w-[1000px] my-6 md:my-10 mx-1 md:m-auto'>
 				<ContactBlock />
-			</section> */}
+			</section>
 		</>
 	);
 }
