@@ -66,7 +66,7 @@ const RenderColumnText = ({
 			<motion.div
 				initial={{ x: revert ? 100 : -100, y: revert ? 50 : -50 }}
 				whileInView={{ x: 0, y: 0 }}
-				transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+				transition={{ duration: 0.5, ease: "easeInOut" }}
 				className='md:[direction:ltr] flex flex-col justify-center'>
 				<h4 className='text-2xl text-default-900 font-semibold'>{title}</h4>
 				<p className='mt-4'>{text}</p>
@@ -84,7 +84,7 @@ const RenderColumnText = ({
 			<motion.div
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
-				transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+				transition={{ duration: 0.5, ease: "easeInOut" }}
 				className='flex justify-end'>
 				<Image
 					isBlurred
