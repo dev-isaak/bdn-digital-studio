@@ -3,31 +3,31 @@ import ContactBlock from "../../_components/ContactBlock";
 import { WordPressPostProps } from "../../../interfaces/wp_post";
 import { getPost } from "../data";
 
-export async function generateMetadata({
-	params,
-}: {
-	params: { slug: string };
-}) {
-	const post: WordPressPostProps = await getPost(params.slug);
+// export async function generateMetadata({
+// 	params,
+// }: {
+// 	params: { slug: string };
+// }) {
+// 	const post: WordPressPostProps = await getPost(params.slug);
 
-	return {
-		alternates: {
-			canonical: `https://bdndigitalstudio.com/blog/${params.slug}`,
-		},
-		title: `${post.title} | BDN Digital Studio`,
-		description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
-		openGraph: {
-			title: post.title,
-			description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
-			images: [
-				{
-					url: post.featuredImage?.node?.mediaItemUrl || "",
-					alt: post.featuredImage?.node?.altText || "Imagen del header",
-				},
-			],
-		},
-	};
-}
+// 	return {
+// 		alternates: {
+// 			canonical: `https://bdndigitalstudio.com/blog/${params.slug}`,
+// 		},
+// 		title: `${post.title} | BDN Digital Studio`,
+// 		description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
+// 		openGraph: {
+// 			title: post.title,
+// 			description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
+// 			images: [
+// 				{
+// 					url: post.featuredImage?.node?.mediaItemUrl || "",
+// 					alt: post.featuredImage?.node?.altText || "Imagen del header",
+// 				},
+// 			],
+// 		},
+// 	};
+// }
 
 interface ParamsProps {
 	params: {
