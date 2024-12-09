@@ -1,4 +1,3 @@
-import { API_URL } from "@/lib/constants";
 import {
 	Button,
 	Card,
@@ -8,6 +7,7 @@ import {
 	Link,
 } from "@nextui-org/react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { getPosts } from "./data";
 
 export const metadata = {
 	alternates: {
@@ -22,16 +22,8 @@ const truncateText = (text: any, maxLength: any) => {
 	return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
 };
 
-export default async function Blog() {
-	const res = await fetch(`${API_URL}/api/get-posts`, {
-		method: "GET",
-		headers: {
-			"content-type": "application/json",
-		},
-	});
-
-	const { nodes } = await res.json();
-	const posts = nodes;
+export default async function BackupBlog() {
+	const posts = await getPosts();
 
 	return (
 		<section className='mt-28 p-2 md:px-10'>
@@ -41,25 +33,20 @@ export default async function Blog() {
 					key={index}
 					isFooterBlurred
 					className='w-[300px] h-[400px] col-span-12 sm:col-span-5 relative'>
-					{/* Header */}
 					<CardHeader className='absolute z-20 top-1 flex-col items-start'>
 						<h4 className='text-white font-medium text-2xl'>{post.title}</h4>
 					</CardHeader>
 
-					{/* Imagen con overlay */}
 					<div className='relative w-full h-full overflow-hidden'>
-						{/* Imagen */}
 						<Image
 							removeWrapper
 							alt={post.featuredImage.node.altText}
 							className='z-0 w-full h-full scale-125 -translate-y-6 object-cover'
 							src={post.featuredImage.node.mediaItemUrl}
 						/>
-						{/* Overlay */}
 						<div className='absolute inset-0 bg-gray-900 opacity-40 z-10'></div>
 					</div>
 
-					{/* Footer */}
 					<CardFooter className='absolute flex-col gap-4 bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-20 justify-between'>
 						<div>
 							<p className='text-black text-tiny'>

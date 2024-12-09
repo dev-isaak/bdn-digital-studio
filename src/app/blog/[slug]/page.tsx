@@ -1,27 +1,17 @@
 import ContactBlock from "@/app/_components/ContactBlock";
-import { API_URL } from "@/lib/constants";
 import { Card, CardHeader, Image } from "@nextui-org/react";
+import { getPost } from "../data";
 
 export async function generateMetadata({
 	params,
 }: {
 	params: { slug: string };
 }) {
-	const slug = params.slug;
-	const res = await fetch(
-		`http://localhost:3000/api/get-post?slug=${encodeURIComponent(slug)}`,
-		{
-			method: "GET",
-			headers: {
-				"content-type": "application/json",
-			},
-		}
-	);
-	const { post } = await res.json();
+	const post: any = await getPost(params.slug);
 
 	return {
 		alternates: {
-			canonical: `https://bdndigitalstudio.com/blog/${slug}`,
+			canonical: `https://bdndigitalstudio.com/blog/${params.slug}`,
 		},
 		title: `${post.title} | BDN Digital Studio`,
 		description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
@@ -40,33 +30,19 @@ export async function generateMetadata({
 
 export default async function Page({ params }: any) {
 	const slug = params.slug;
-	const res = await fetch(
-		`${API_URL}/api/get-post?slug=${encodeURIComponent(slug)}`,
-		{
-			method: "GET",
-			headers: {
-				"content-type": "application/json",
-			},
-		}
-	);
-	let {
-		post: {
-			content,
-			title,
-			featuredImage: {
-				node: { altText, mediaItemUrl },
-			},
+	const {
+		title,
+		content,
+		featuredImage: {
+			node: { altText, mediaItemUrl },
 		},
-	} = await res.json();
-	// console.log(", respuesta: ", post.content);
+	} = await getPost(slug);
 
 	return (
 		<>
 			<Card radius='none' className='h-96 relative'>
-				{/* Overlay con opacidad */}
 				<div className='absolute inset-0 bg-black opacity-50 z-10'></div>
 
-				{/* Contenido del encabezado */}
 				<CardHeader className='h-96 absolute flex flex-col justify-center align-middle text-center gap-10 z-20'>
 					<div>
 						<h1 className='uppercase xs:text-4xl md:text-4xl text-white font-bold'>
@@ -75,7 +51,6 @@ export default async function Page({ params }: any) {
 					</div>
 				</CardHeader>
 
-				{/* Imagen de fondo */}
 				<Image
 					radius='none'
 					height={500}
