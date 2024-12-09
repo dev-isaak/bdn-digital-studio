@@ -11,7 +11,7 @@ export default function AnimatedTitle() {
 	return (
 		<div
 			className={`${oswald.className} flex-grow-2 relative md:flex-grow md:ml-8`}>
-			<h1 className='absolute top-[20vh] left-1 md:bottom-[calc(3vw+1em)] md:top-[20vh] md:left-2 text-white-light text-[28vw] md:text-[calc(7vw+5vh)] leading-none tracking-wider font-oswald'>
+			<h1 className='absolute top-[20vh] left-1 md:bottom-[calc(3vw+1em)] md:top-[20vh] md:left-2 text-white-light text-[28vw] md:text-[calc(7vw+5vh)] font-medium leading-none tracking-wider font-oswald'>
 				{!isMobile ? (
 					<>
 						<motion.div
