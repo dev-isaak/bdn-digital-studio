@@ -6,23 +6,20 @@ export default function useWindowSize() {
 
 	useEffect(() => {
 		// Verificar si estamos en un entorno del cliente
-		const handleResize = () => {
-			if (typeof window !== "undefined") {
-				setIsMobile(window.innerWidth < 700);
-			}
-		};
-
+		// const handleResize = () => {
+		// 	if (typeof window !== "undefined") {
+		// 		setIsMobile(window.innerWidth < 700);
+		// 	}
+		// };
 		// Configurar el tamaño inicial
-		handleResize();
-
+		// handleResize();
 		// Añadir un listener para cambios en el tamaño de la ventana
-		window.addEventListener("resize", handleResize);
-
+		// window.addEventListener("resize", handleResize);
 		// Cleanup
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
+		// return () => {
+		// 	window.removeEventListener("resize", handleResize);
+		// };
 	}, []);
 
-	return { isMobile };
+	return { isMobile: false };
 }
