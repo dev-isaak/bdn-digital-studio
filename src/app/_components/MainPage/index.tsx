@@ -1,3 +1,4 @@
+import CarousselTitle from "../CarousselTitle";
 import ContactBlock from "../ContactBlock";
 import AnimatedHeroText from "./AnimatedHeroText";
 import AnimatedTitle from "./AnimatedTitle";
@@ -21,6 +22,7 @@ export default function MainPage() {
 					<FirstSection />
 				</section>
 				<section className='overflow-hidden '>
+					<CarousselTitle title='servicios' />
 					<Services />
 				</section>
 				<section>
