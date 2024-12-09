@@ -1,3 +1,5 @@
+import { Button } from "@nextui-org/react";
+
 export default function PoliticaDeCookies() {
 	return (
 		<main className='mt-20 p-2 pb-8 md:px-8'>
@@ -174,6 +176,7 @@ export default function PoliticaDeCookies() {
 				</li>
 			</ul>
 			<h2 className='font-semibold text-xl my-2'>Configuración de Cookies</h2>
+			<Button>Configurar Cookies</Button>
 		</main>
 	);
 }
