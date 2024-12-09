@@ -5,10 +5,10 @@ export default function ContactBlock() {
 		<Card className='h-96'>
 			<CardHeader className='h-96 absolute flex flex-col justify-center align-middle text-center gap-10'>
 				<div>
-					<h2 className='text-4xl text-white font-bold'>
+					<h2 className='text-2xl text-white font-bold'>
 						No te quedes con la duda <br />{" "}
 					</h2>
-					<span className='uppercase xs:text-4xl md:text-8xl text-white font-bold'>
+					<span className='uppercase text-4xl md:text-8xl text-white font-bold'>
 						Contáctanos
 					</span>
 				</div>

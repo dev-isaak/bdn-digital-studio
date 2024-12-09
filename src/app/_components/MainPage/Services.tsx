@@ -63,36 +63,40 @@ const RenderColumnText = ({
 			className={`max-w-4xl m-auto grid grid-cols-1 md:grid-cols-2 p-4 ${
 				revert ? "md:[direction:rtl]" : ""
 			}`}>
-			<motion.div
-				initial={{ x: revert ? 100 : -100, y: revert ? 50 : -50 }}
-				whileInView={{ x: 0, y: 0 }}
-				transition={{ duration: 0.5, ease: "easeInOut" }}>
-				<h4 className='text-2xl text-default-900 font-semibold'>{title}</h4>
-				<p className='mt-4'>{text}</p>
-				<Button
-					as={Link}
-					href='#'
-					color='primary'
-					size='md'
-					radius='sm'
-					className='w-fit mt-6'
-					endContent={<FaArrowRightLong />}>
-					Más Detalles
-				</Button>
-			</motion.div>
-			<motion.div
-				initial={{ opacity: 0 }}
-				whileInView={{ opacity: 1 }}
-				transition={{ duration: 0.5, ease: "easeInOut" }}>
-				<Image
-					isBlurred
-					alt={alt}
-					className='m-5'
-					src={`/assets/images/${image}`}
-					width={240}
-					height={350}
-				/>
-			</motion.div>
+			<div className='md:[direction:ltr] flex flex-col justify-center'>
+				<motion.div
+					initial={{ x: revert ? 100 : -100, y: revert ? 50 : -50 }}
+					whileInView={{ x: 0, y: 0 }}
+					transition={{ duration: 0.5, ease: "easeInOut" }}>
+					<h4 className='text-2xl text-default-900 font-semibold'>{title}</h4>
+					<p className='mt-4'>{text}</p>
+					<Button
+						as={Link}
+						href='#'
+						color='primary'
+						size='md'
+						radius='sm'
+						className='w-fit mt-6'
+						endContent={<FaArrowRightLong />}>
+						Más Detalles
+					</Button>
+				</motion.div>
+			</div>
+			<div className='flex justify-center md:justify-end'>
+				<motion.div
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ duration: 0.5, ease: "easeInOut" }}>
+					<Image
+						isBlurred
+						alt={alt}
+						className='m-5'
+						src={`/assets/images/${image}`}
+						width={240}
+						height={350}
+					/>
+				</motion.div>
+			</div>
 		</div>
 	);
 };
