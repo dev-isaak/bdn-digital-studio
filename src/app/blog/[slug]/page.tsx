@@ -1,7 +1,7 @@
-import ContactBlock from "@/app/_components/ContactBlock";
 import { Card, CardHeader, Image } from "@nextui-org/react";
+import ContactBlock from "../../_components/ContactBlock";
+import { WordPressPostProps } from "../../../interfaces/wp_post";
 import { getPost } from "../data";
-import { WordPressPostProps } from "@/interfaces/wp_post";
 
 export async function generateMetadata({
 	params,
