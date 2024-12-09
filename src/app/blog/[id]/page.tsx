@@ -2,9 +2,19 @@ import { Card, CardHeader, Image } from "@nextui-org/react";
 import ContactBlock from "../../_components/ContactBlock";
 import { WordPressPostProps } from "../../../interfaces/wp_post";
 import { getPost } from "../data";
-import { PageProps } from "../../../../.next/types/app/layout";
+import { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+interface ParamsProps {
+	params: {
+		id: string;
+	};
+}
+
+export async function generateMetadata(
+	{ params }: ParamsProps, // Tipamos correctamente los parámetros
+	parent: Promise<Metadata> // `parent` es de tipo `Promise<Metadata>`
+): Promise<Metadata> {
+	// La función retorna una Promise de tipo Metadata
 	const post: WordPressPostProps = await getPost(params.id);
 
 	return {
@@ -26,14 +36,8 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 	};
 }
 
-interface ParamsProps {
-	params: {
-		id: string;
-	};
-}
-
-export default async function Page({ params }: any) {
-	const slug = params?.id;
+export default async function Page({ params }: ParamsProps) {
+	const slug = params.id;
 	const {
 		title,
 		content,
