@@ -1,15 +1,22 @@
-
 interface emailProps {
-  resend: any,
+  resend: any;
   name: string;
-  lastName: string,
-  email: string,
-  phone: string,
-  companyName: string,
-  message: string
+  lastName: string;
+  email: string;
+  phone: string;
+  companyName: string;
+  message: string;
 }
 
-export const emailToStudioAfterContact = async ({ resend, name, lastName, email, phone, companyName, message }: emailProps) => {
+export const emailToStudioAfterContact = async ({
+  resend,
+  name,
+  lastName,
+  email,
+  phone,
+  companyName,
+  message,
+}: emailProps) => {
   try {
     const res = await resend.emails.send({
       from: "hola@bdndigitalstudio.com",
@@ -23,11 +30,9 @@ export const emailToStudioAfterContact = async ({ resend, name, lastName, email,
   <p><strong>Message</strong>: ${message}</p>
   `,
     });
-    if (res.error === null) return true
-
+    if (res.error === null) return true;
   } catch (error) {
-    console.log(error)
-    return false
+    console.log(error);
+    return false;
   }
-
-}
+};

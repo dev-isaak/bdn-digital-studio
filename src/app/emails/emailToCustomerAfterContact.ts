@@ -1,11 +1,14 @@
-
 interface EmailProps {
-  resend: any,
-  email: string,
-  name: string
+  resend: any;
+  email: string;
+  name: string;
 }
 
-export const emailToCustomerAfterContact = async ({ resend, email, name }: EmailProps) => {
+export const emailToCustomerAfterContact = async ({
+  resend,
+  email,
+  name,
+}: EmailProps) => {
   try {
     const res = await resend.emails.send({
       from: "hola@bdndigitalstudio.com",
@@ -23,11 +26,11 @@ export const emailToCustomerAfterContact = async ({ resend, email, name }: Email
     <p>Saludos cordiales,</p>
     <p>El equipo de <strong>BDN Digital Studio</strong></p>
     <p><a href="https://bdndigitalstudio.com">Visítanos en nuestro sitio web</a></p>
-  `
+  `,
     });
-    if (res.error === null) return true
+    if (res.error === null) return true;
   } catch (error) {
-    console.log(error)
-    return false
+    console.log(error);
+    return false;
   }
-}
+};
