@@ -1,8 +1,9 @@
 import { wpquery } from '@/app/services/wordpress';
+import { WordPressPostProps } from '@/interfaces/wp_post';
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type ResponseData = {
-  post?: any
+  post?: WordPressPostProps
   message?: string
 }
 

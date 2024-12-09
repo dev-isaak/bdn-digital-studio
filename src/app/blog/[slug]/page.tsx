@@ -1,13 +1,14 @@
 import ContactBlock from "@/app/_components/ContactBlock";
 import { Card, CardHeader, Image } from "@nextui-org/react";
 import { getPost } from "../data";
+import { WordPressPostProps } from "@/interfaces/wp_post";
 
 export async function generateMetadata({
 	params,
 }: {
 	params: { slug: string };
 }) {
-	const post: any = await getPost(params.slug);
+	const post: WordPressPostProps = await getPost(params.slug);
 
 	return {
 		alternates: {
@@ -28,7 +29,13 @@ export async function generateMetadata({
 	};
 }
 
-export default async function Page({ params }: any) {
+interface ParamsProps {
+	params: {
+		slug: string;
+	};
+}
+
+export default async function Page({ params }: ParamsProps) {
 	const slug = params.slug;
 	const {
 		title,
@@ -36,7 +43,7 @@ export default async function Page({ params }: any) {
 		featuredImage: {
 			node: { altText, mediaItemUrl },
 		},
-	} = await getPost(slug);
+	}: WordPressPostProps = await getPost(slug);
 
 	return (
 		<>
@@ -73,15 +80,4 @@ export default async function Page({ params }: any) {
 			</section>
 		</>
 	);
-}
-
-interface PostProps {
-	title: string;
-	content: string;
-	featuredImage: {
-		node: {
-			mediaItemUrl: string;
-			altText: string;
-		};
-	};
 }
