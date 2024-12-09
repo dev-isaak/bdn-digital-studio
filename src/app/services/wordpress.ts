@@ -6,6 +6,7 @@ interface WPGraphQLParams {
 
 export async function wpquery({ query, variables = {} }: WPGraphQLParams) {
   const res = await fetch('https://pantalla-digital.com/graphql', {
+    cache: 'force-cache',
     method: 'post',
     headers: {
       'Content-Type': 'application/json'
