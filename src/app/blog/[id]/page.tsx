@@ -2,6 +2,7 @@ import { Card, CardHeader, Image } from "@nextui-org/react";
 import ContactBlock from "../../_components/ContactBlock";
 import { WordPressPostProps } from "../../../interfaces/wp_post";
 import { getPost } from "../data";
+import { PageProps } from "../../../../.next/types/app/layout";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
 	const post: WordPressPostProps = await getPost(params.id);
@@ -31,8 +32,8 @@ interface ParamsProps {
 	};
 }
 
-export default async function Page({ params }: ParamsProps) {
-	const slug = params.id;
+export default async function Page({ params }: any) {
+	const slug = params?.id;
 	const {
 		title,
 		content,
