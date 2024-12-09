@@ -40,7 +40,7 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<NextUIProvider>
 					<RenderNavbar />
-					<div className='min-h-screen'>{children}</div>
+					<div className='min-h-screen overflow-hidden'>{children}</div>
 					<Footer />
 				</NextUIProvider>
 				<ToastContainer />
