@@ -47,7 +47,8 @@ export default async function Page({ params }: ParamsProps) {
 
 	return (
 		<>
-			<Card radius='none' className='h-96 relative'>
+			<h1>test</h1>
+			{/* <Card radius='none' className='h-96 relative'>
 				<div className='absolute inset-0 bg-black opacity-50 z-10'></div>
 
 				<CardHeader className='h-96 absolute flex flex-col justify-center align-middle text-center gap-10 z-20'>
@@ -77,7 +78,7 @@ export default async function Page({ params }: ParamsProps) {
 			</section>
 			<section className='max-w-[1000px] my-6 md:my-10 mx-1 md:m-auto'>
 				<ContactBlock />
-			</section>
+			</section> */}
 		</>
 	);
 }
