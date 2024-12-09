@@ -36,18 +36,9 @@ export default function OurMetodology() {
 	];
 	return (
 		<div className='flex flex-col gap-4 items-center my-6'>
-			{nuestraMetodologia.map((item, index) => (
-				<motion.div
-					key={index}
-					initial={{ x: item.isOdd ? 400 : -400 }}
-					whileInView={{ x: 0 }}
-					transition={{ duration: 0.5, ease: "easeInOut" }}>
-					<Card
-						className={`${
-							isMobile
-								? ""
-								: `max-w-xl ${item.isOdd ? "translate-x-5" : "-translate-x-5"}`
-						}`}>
+			{nuestraMetodologia.map((item, index) => {
+				const cardContent = (
+					<>
 						<CardHeader>
 							{item.icon}
 							<h3 className='ml-6 font-medium text-xl'>{item.title}</h3>
@@ -55,9 +46,40 @@ export default function OurMetodology() {
 						<CardBody>
 							<div dangerouslySetInnerHTML={{ __html: item.body }}></div>
 						</CardBody>
-					</Card>
-				</motion.div>
-			))}
+					</>
+				);
+
+				if (isMobile) {
+					return (
+						<Card
+							key={index}
+							className={`${
+								isMobile
+									? ""
+									: `max-w-xl ${
+											item.isOdd ? "translate-x-5" : "-translate-x-5"
+									  }`
+							}`}>
+							{cardContent}
+						</Card>
+					);
+				}
+
+				return (
+					<motion.div
+						key={index}
+						initial={{ x: item.isOdd ? 400 : -400 }}
+						whileInView={{ x: 0 }}
+						transition={{ duration: 0.5, ease: "easeInOut" }}>
+						<Card
+							className={`max-w-xl ${
+								item.isOdd ? "translate-x-5" : "-translate-x-5"
+							}`}>
+							{cardContent}
+						</Card>
+					</motion.div>
+				);
+			})}
 		</div>
 	);
 }

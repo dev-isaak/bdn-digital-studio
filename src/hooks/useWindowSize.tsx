@@ -11,13 +11,10 @@ export default function useWindowSize() {
 				setIsMobile(window.innerWidth < 700);
 			}
 		};
-
 		// Configurar el tamaño inicial
 		handleResize();
-
 		// Añadir un listener para cambios en el tamaño de la ventana
 		window.addEventListener("resize", handleResize);
-
 		// Cleanup
 		return () => {
 			window.removeEventListener("resize", handleResize);
