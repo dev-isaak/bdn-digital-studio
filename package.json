@@ -2,6 +2,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next",
+		"clean": "rimraf .next",
 		"build": "next build",
 		"start": "next start"
 	},
