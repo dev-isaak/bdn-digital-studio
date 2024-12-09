@@ -1,3 +1,4 @@
+import { HEADLESS_CMS_GQL } from "@/lib/constants";
 
 interface WPGraphQLParams {
   query: string;
@@ -5,7 +6,7 @@ interface WPGraphQLParams {
 }
 
 export async function wpquery({ query, variables = {} }: WPGraphQLParams) {
-  const res = await fetch('https://pantalla-digital.com/graphql', {
+  const res = await fetch(HEADLESS_CMS_GQL, {
     cache: 'force-cache',
     method: 'post',
     headers: {

@@ -1,4 +1,3 @@
-import { CMS_NAME } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
@@ -12,10 +11,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: `BDN Digital Studio`,
-	description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
-	// openGraph: {
-	// 	images: [HOME_OG_IMAGE_URL],
-	// },
+	description: `En BDN Digital Studio somos expertos en desarrollo web, optimización WordPress, SEO, SEM, Redes Sociales y mucho más. Creamos soluciones digitales personalizadas para potenciar tu presencia online.`,
+	openGraph: {
+		description:
+			"En BDN Digital Studio somos expertos en desarrollo web, optimización WordPress, SEO, SEM, Redes Sociales y mucho más. Creamos soluciones digitales personalizadas para potenciar tu presencia online.",
+		tags: "BDN Digital Studio, desarrollo web, mantenimiento WordPress, optimización web, SEO, diseño web, agencia digital",
+		title:
+			"BDN Digital Studio | Desarrollo Web SEO, SEM, Redes Sociales y Optimización Wordpress",
+	},
 };
 
 export default function RootLayout({
