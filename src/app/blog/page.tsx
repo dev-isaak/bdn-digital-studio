@@ -9,6 +9,9 @@ import {
 import { FaArrowRightLong } from "react-icons/fa6";
 import { getPosts } from "./data";
 import { WordPressPostProps } from "@/interfaces/wp_post";
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({ subsets: ["latin"] });
 
 export const metadata = {
 	alternates: {
@@ -27,9 +30,14 @@ export default async function BackupBlog() {
 	const posts = await getPosts();
 
 	return (
-		<section className='mt-28 p-2 md:px-10'>
-			<h1 className='mb-4 text-center text-4xl font-semibold'>Blog</h1>
-			<div className='flex justify-center sm:justify-between gap-6 flex-wrap'>
+		<section>
+			<div className='relative h-[300px] md:h-[450px] bg-primary text-white mb-6'>
+				<h1
+					className={`${oswald.className} absolute bottom-2 md:bottom-6 left-2 md:left-6 mb-4 text-center text-8xl md:text-[200px] font-semibold`}>
+					Blog.
+				</h1>
+			</div>
+			<div className='flex justify-center sm:justify-between gap-6 flex-wrap p-2 md:max-w-[1000px] m-auto'>
 				{posts.map((post: WordPressPostProps, index: number) => (
 					<Card
 						key={index}
