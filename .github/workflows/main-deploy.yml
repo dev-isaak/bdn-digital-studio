@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: lts/*
 
+      - name: Install react email
+        run: cd react-email-starter && npm i 
+
       - name: Install step
         run: "npm install"
 
