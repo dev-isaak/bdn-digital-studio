@@ -88,8 +88,8 @@ export default function WebDevelopment() {
 						<ul className='flex flex-col gap-4'>
 							<h4>PROS</h4>
 							<li>
-								<div className='flex gap-4'>
-									<FaCheck size={20} color='green' />
+								<div className='flex gap-4 items-center'>
+									<FaCheck size={15} className='flex-shrink-0 text-green-500' />
 									<p>
 										<strong>Rápida implementación</strong>, perfecto para sitios
 										básicos, como blogs, páginas corporativas, etc.
@@ -97,8 +97,8 @@ export default function WebDevelopment() {
 								</div>
 							</li>
 							<li>
-								<div className='flex gap-4'>
-									<FaCheck size={20} color='green' />
+								<div className='flex gap-4 items-center'>
+									<FaCheck size={15} className='flex-shrink-0 text-green-500' />
 									<p>
 										Gran cantidad de <strong>temas y plugins</strong>{" "}
 										disponibles listos para usar.
@@ -106,8 +106,8 @@ export default function WebDevelopment() {
 								</div>
 							</li>
 							<li>
-								<div className='flex gap-4'>
-									<FaCheck size={20} color='green' />
+								<div className='flex gap-4 items-center'>
+									<FaCheck size={15} className='flex-shrink-0 text-green-500' />
 									<p>
 										Podrás gestionar contenido sin conocimientos de
 										programación.
@@ -115,8 +115,8 @@ export default function WebDevelopment() {
 								</div>
 							</li>
 							<li>
-								<div className='flex gap-4'>
-									<FaCheck size={20} color='green' />
+								<div className='flex gap-4 items-center'>
+									<FaCheck size={15} className='flex-shrink-0 text-green-500' />
 									<p>
 										<strong>Más económico </strong>para proyectos pequeños
 										debido al uso de plantillas y funcionalidades que facilitan
@@ -126,8 +126,8 @@ export default function WebDevelopment() {
 							</li>
 							<h4>CONS</h4>
 							<li>
-								<div className='flex gap-4'>
-									<ImCross size={20} color='red' />
+								<div className='flex gap-4 items-center'>
+									<ImCross size={15} className='flex-shrink-0 text-red-500' />
 									<p>
 										Al ser un CSM muy popular, es un objetivo común de hackers,
 										lo que requiere actualizaciones constantes para proteger el
@@ -136,8 +136,8 @@ export default function WebDevelopment() {
 								</div>
 							</li>
 							<li>
-								<div className='flex gap-4'>
-									<ImCross size={20} color='red' />
+								<div className='flex gap-4 items-center'>
+									<ImCross size={15} className='flex-shrink-0 text-red-500' />
 									<p>
 										Algunos plugins y temas pueden quedarse obsoletos, lo que
 										dificulta el mantenimiento a largo plazo.
@@ -145,8 +145,8 @@ export default function WebDevelopment() {
 								</div>
 							</li>
 							<li>
-								<div className='flex gap-4'>
-									<ImCross size={20} color='red' />
+								<div className='flex gap-4 items-center'>
+									<ImCross size={15} className='flex-shrink-0 text-red-500' />
 									<p>
 										Usar plugins y/o temas de pago aumentará las facturas
 										menusales y/o anuales además que acabará sobrecargando y
@@ -171,10 +171,10 @@ export default function WebDevelopment() {
 					</div>
 					<div className='p-4'>
 						<ul className='flex flex-col gap-4'>
-							<h4>PROS</h4>
+							<h4 className='text-lg font-bold'>PROS</h4>
 							<li>
-								<div className='flex gap-4'>
-									<FaCheck size={20} color='green' />
+								<div className='flex gap-4 items-center'>
+									<FaCheck size={15} className='flex-shrink-0 text-green-500' />
 									<p>
 										<strong>100% flexible</strong>, se puede desarrollar
 										cualquier diseño o funcionalidad que tengas en mente.
@@ -182,8 +182,8 @@ export default function WebDevelopment() {
 								</div>
 							</li>
 							<li>
-								<div className='flex gap-4'>
-									<FaCheck size={20} color='green' />
+								<div className='flex gap-4 items-center'>
+									<FaCheck size={15} className='flex-shrink-0 text-green-500' />
 									<p>
 										Trabajamos con frameworks diseñados para optimizar el
 										rendimiento y la indexación en buscadores.
@@ -191,21 +191,21 @@ export default function WebDevelopment() {
 								</div>
 							</li>
 							<li>
-								<div className='flex gap-4'>
-									<FaCheck size={20} color='green' />
+								<div className='flex gap-4 items-center'>
+									<FaCheck size={15} className='flex-shrink-0 text-green-500' />
 									<p>Ideal para proyectos que planean escalar en el futuro.</p>
 								</div>
 							</li>
 							<li>
-								<div className='flex gap-4'>
-									<FaCheck size={20} color='green' />
+								<div className='flex gap-4 items-center'>
+									<FaCheck size={15} className='flex-shrink-0 text-green-500' />
 									<p>Facilidad de mantenimiento a largo plazo.</p>
 								</div>
 							</li>
-							<h4>CONS</h4>
+							<h4 className='text-lg font-bold'>CONS</h4>
 							<li>
-								<div className='flex gap-4'>
-									<ImCross size={20} color='red' />
+								<div className='flex gap-4 items-center'>
+									<ImCross size={15} className='flex-shrink-0 text-red-500' />
 									<p>
 										Requiere más tiempo de desarrollo y experiencia técnica, lo
 										que hace elevar los costos.
@@ -213,8 +213,8 @@ export default function WebDevelopment() {
 								</div>
 							</li>
 							<li>
-								<div className='flex gap-4'>
-									<ImCross size={20} color='red' />
+								<div className='flex gap-4 items-center'>
+									<ImCross size={15} className='flex-shrink-0 text-red-500' />
 									<p>
 										Más difícil de gestionar para clientes no técnicos. (Aunque
 										se pueden desarrollar interfaces de gestión amigables)
@@ -222,15 +222,16 @@ export default function WebDevelopment() {
 								</div>
 							</li>
 							<li>
-								<div className='flex gap-4'>
-									<ImCross size={20} color='red' />
+								<div className='flex gap-4 items-center'>
+									<ImCross size={15} className='flex-shrink-0 text-red-500' />
 									<p>
-										Necesita actualizaciones manuales y requieren de
+										Necesita actualizaciones manuales y requiere de
 										desarrolladores cualificados.
 									</p>
 								</div>
 							</li>
 						</ul>
+
 						<Button
 							className='mt-4'
 							color='primary'
