@@ -8,35 +8,34 @@ interface ParamsProps extends PageProps {
 	params: Promise<{ id: string }>;
 }
 
-// export async function generateMetadata(
-// 	{ params }: ParamsProps,
-// 	parent: Promise<Metadata>
-// ): Promise<Metadata> {
-// 	const resolvedParams = await params;
-// 	const post = await getPost(resolvedParams.id);
-// 	if (!post)
-// 		return {
-// 			title: `Página no encontrada | BDN Digital Studio`,
-// 		};
+export async function generateMetadata({
+	params,
+}: ParamsProps): Promise<Metadata> {
+	const resolvedParams = await params;
+	const post = await getPost(resolvedParams.id);
+	if (!post)
+		return {
+			title: `Página no encontrada | BDN Digital Studio`,
+		};
 
-// 	return {
-// 		alternates: {
-// 			canonical: `https://bdndigitalstudio.com/blog/${resolvedParams.id}`,
-// 		},
-// 		title: `${post.title} | BDN Digital Studio`,
-// 		description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
-// 		openGraph: {
-// 			title: post.title,
-// 			description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
-// 			images: [
-// 				{
-// 					url: post.featuredImage?.node?.mediaItemUrl || "",
-// 					alt: post.featuredImage?.node?.altText || "Imagen del header",
-// 				},
-// 			],
-// 		},
-// 	};
-// }
+	return {
+		alternates: {
+			canonical: `https://bdndigitalstudio.com/blog/${resolvedParams.id}`,
+		},
+		title: `${post.title} | BDN Digital Studio`,
+		description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
+		openGraph: {
+			title: post.title,
+			description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
+			images: [
+				{
+					url: post.featuredImage?.node?.mediaItemUrl || "",
+					alt: post.featuredImage?.node?.altText || "Imagen del header",
+				},
+			],
+		},
+	};
+}
 
 export default async function Page({ params }: ParamsProps) {
 	const resolvedParams = await params;
