@@ -1,20 +1,19 @@
 import { Button, Card, CardHeader, Image, Link } from "@nextui-org/react";
 import ContactBlock from "../../_components/ContactBlock";
-import { WordPressPostProps } from "../../../interfaces/wp_post";
 import { getPost } from "../data";
 import { Metadata } from "next";
+import { PageProps } from "../../../../.next/types/app/page";
 
-interface ParamsProps {
-	params: {
-		id: string;
-	};
+interface ParamsProps extends PageProps {
+	params: Promise<{ id: string }>;
 }
 
 export async function generateMetadata(
 	{ params }: ParamsProps,
 	parent: Promise<Metadata>
 ): Promise<Metadata> {
-	const post = await getPost(params.id);
+	const resolvedParams = await params;
+	const post = await getPost(resolvedParams.id);
 	if (!post)
 		return {
 			title: `Página no encontrada | BDN Digital Studio`,
@@ -22,7 +21,7 @@ export async function generateMetadata(
 
 	return {
 		alternates: {
-			canonical: `https://bdndigitalstudio.com/blog/${params.id}`,
+			canonical: `https://bdndigitalstudio.com/blog/${resolvedParams.id}`,
 		},
 		title: `${post.title} | BDN Digital Studio`,
 		description: post.seo?.metaDesc || "Blog | BDN Digital Studio",
@@ -40,7 +39,8 @@ export async function generateMetadata(
 }
 
 export default async function Page({ params }: ParamsProps) {
-	const slug = params.id;
+	const resolvedParams = await params;
+	const slug = resolvedParams.id;
 	const post = await getPost(slug);
 	if (!post) {
 		return <RenderPaginaNoEncontrada />;
