@@ -1,3 +1,4 @@
+import { WordPressPostProps } from "@/interfaces/wp_post";
 import { errorToast } from "../_components/toastify";
 import { wpquery } from "../services/wordpress";
 
@@ -38,7 +39,7 @@ export const getPosts = async () => {
   }
 };
 
-export const getPost = async (slug: string) => {
+export const getPost = async (slug: string): Promise<WordPressPostProps | undefined> => {
   try {
     const { post } = await wpquery({
       query: `
@@ -68,5 +69,6 @@ export const getPost = async (slug: string) => {
   } catch (e) {
     errorToast("Error obteniendo posts. Prueba de nuevo más tarde.");
     console.log(e);
+    return undefined
   }
 };
