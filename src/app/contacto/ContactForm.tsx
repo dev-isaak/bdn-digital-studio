@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import { useState } from "react";
 import { Form, Input, Checkbox, Button, Textarea } from "@nextui-org/react";
 import "react-toastify/dist/ReactToastify.css";
 import { errorToast } from "../_components/toastify";
@@ -33,7 +33,8 @@ interface ErrorProps {
 
 export default function ContactForm() {
 	const router = useRouter();
-	const [errors, setErrors] = React.useState({
+	const [isLoading, setIsLoading] = useState(false);
+	const [errors, setErrors] = useState({
 		name: "",
 		lastname: "",
 		email: "",
@@ -51,6 +52,7 @@ export default function ContactForm() {
 	});
 
 	const onSubmit = async (e: any) => {
+		setIsLoading(true);
 		e.preventDefault();
 		const data = Object.fromEntries(new FormData(e.currentTarget));
 
@@ -95,11 +97,14 @@ export default function ContactForm() {
 			body: JSON.stringify(data),
 		});
 
-		if (!res)
+		if (!res) {
 			errorToast(
 				"No se ha podido enviar el correo. Prueba de nuevo más tarde."
 			);
+			setIsLoading(false);
+		}
 		router.push("/mensaje-enviado");
+		setIsLoading(false);
 	};
 
 	return (
@@ -342,7 +347,11 @@ export default function ContactForm() {
 				)}
 
 				<div className='flex gap-4'>
-					<Button className='w-fit' color='primary' type='submit'>
+					<Button
+						isLoading={isLoading}
+						className='w-fit'
+						color='primary'
+						type='submit'>
 						Contactar
 					</Button>
 				</div>
