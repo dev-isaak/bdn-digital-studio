@@ -86,7 +86,12 @@ export default function BannerCookies() {
 						Puede aceptar la instalación de todas las cookies haciendo clic en
 						el botón “Aceptar Cookies”, configurar tus preferencias haciendo
 						clic en el botón “Guardar configuración”, o rechazar su instalación,
-						haciendo clic en el botón “Denegar Cookies”.
+						haciendo clic en el botón “Denegar Cookies”. Podrás acceder en
+						cualquier momento a la configuración de las cookies en la página de{" "}
+						<a className='underline' href='/politica-de-cookies'>
+							Política de Cookies
+						</a>
+						.
 					</p>
 					{/* Pasar estado y controlador como props */}
 					<CookieSettings

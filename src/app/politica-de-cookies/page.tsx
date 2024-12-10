@@ -177,7 +177,7 @@ export default function PoliticaDeCookies() {
 					información y ajustar la configuración de su navegador.
 				</li>
 			</ul>
-			<h2 className='font-semibold text-xl my-2'>Configuración de Cookies</h2>
+			<h2 className='font-semibold text-4xl my-8'>Configuración de Cookies</h2>
 			<Cookies />
 		</main>
 	);
