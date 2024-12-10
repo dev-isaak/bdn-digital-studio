@@ -1,10 +1,24 @@
-import { Card, CardHeader, Image } from "@nextui-org/react";
+import { Button, Card, CardHeader, Image, Link } from "@nextui-org/react";
 import ContactBlock from "../../_components/ContactBlock";
 import { WordPressPostProps } from "../../../interfaces/wp_post";
 import { getPost } from "../data";
+import { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-	const post: WordPressPostProps = await getPost(params.id);
+interface ParamsProps {
+	params: {
+		id: string;
+	};
+}
+
+export async function generateMetadata(
+	{ params }: ParamsProps,
+	parent: Promise<Metadata>
+): Promise<Metadata> {
+	const post = await getPost(params.id);
+	if (!post)
+		return {
+			title: `Página no encontrada | BDN Digital Studio`,
+		};
 
 	return {
 		alternates: {
@@ -25,21 +39,19 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 	};
 }
 
-interface ParamsProps {
-	params: {
-		id: string;
-	};
-}
-
 export default async function Page({ params }: ParamsProps) {
 	const slug = params.id;
+	const post = await getPost(slug);
+	if (!post) {
+		return <RenderPaginaNoEncontrada />;
+	}
 	const {
 		title,
 		content,
 		featuredImage: {
 			node: { altText, mediaItemUrl },
 		},
-	}: WordPressPostProps = await getPost(slug);
+	} = post;
 
 	return (
 		<>
@@ -64,7 +76,7 @@ export default async function Page({ params }: ParamsProps) {
 				/>
 			</Card>
 
-			<section className=''>
+			<section>
 				<div>
 					<div
 						id='blog-post'
@@ -77,3 +89,16 @@ export default async function Page({ params }: ParamsProps) {
 		</>
 	);
 }
+
+const RenderPaginaNoEncontrada = () => {
+	return (
+		<section className='mt-28 text-center font-semibold'>
+			<h1 className='text-4xl mb-6'>
+				No se ha encontrado el post que buscabas.
+			</h1>
+			<Button color='primary' as={Link} href='/blog'>
+				Ir al blog
+			</Button>
+		</section>
+	);
+};
