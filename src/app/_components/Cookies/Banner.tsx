@@ -11,6 +11,7 @@ import {
 import CookieSettings from "./CookieSettings";
 import { useEffect, useState } from "react";
 import { getLocalStorage, setLocalStorage } from "@/lib/storageHelper";
+import { succesToast } from "../toastify";
 
 export default function BannerCookies() {
 	const { isOpen, onOpen, onClose } = useDisclosure({ defaultOpen: true }); // Default abierto
@@ -31,9 +32,8 @@ export default function BannerCookies() {
 		if (cookieConsent === null) return;
 
 		// Actualiza el modo de consentimiento en Google Analytics
-		const newValue = cookieConsent ? "granted" : "denied";
 		window.gtag("consent", "update", {
-			analytics_storage: newValue,
+			analytics_storage: cookieConsent ? "granted" : "denied",
 		});
 
 		// Almacena el consentimiento en localStorage
@@ -55,6 +55,11 @@ export default function BannerCookies() {
 
 	const handleAcceptCookies = () => {
 		setCookieConsent(true);
+	};
+
+	const handleSaveConfigCookies = () => {
+		setCookieConsent(isSwitchEnabled);
+		succesToast("Tu configuración de cookies se ha guardado.");
 	};
 
 	return (
@@ -90,7 +95,10 @@ export default function BannerCookies() {
 					/>
 				</ModalBody>
 				<ModalFooter className='flex flex-col-reverse md:flex-row'>
-					<Button color='primary' isDisabled={disabledConfigButton}>
+					<Button
+						color='primary'
+						isDisabled={disabledConfigButton}
+						onPress={handleSaveConfigCookies}>
 						Guardar configuración
 					</Button>
 					<Button color='primary' onPress={handleDenyCookies}>
