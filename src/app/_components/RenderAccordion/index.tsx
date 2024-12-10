@@ -2,31 +2,32 @@
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 interface DataList {
-  question: string;
-  answer: string;
+	question: string;
+	answer: string;
 }
 interface RenderAccordionProps {
-  data: DataList[];
+	data: DataList[];
 }
 
 export default function RenderAccordion({ data }: RenderAccordionProps) {
-  return (
-    <div className="m-auto max-w-3xl">
-      <Accordion
-        variant="shadow"
-        selectionMode="single"
-        itemClasses={{ title: "text-gray-900 font-medium" }}
-      >
-        {data.map((data, index: number) => (
-          <AccordionItem
-            key={index}
-            title={data.question}
-            aria-label={data.question}
-          >
-            <p className="ml-4">{data.answer}</p>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </div>
-  );
+	return (
+		<div className='m-auto max-w-3xl my-8'>
+			<h2 className='uppercase font-medium text-4xl text-center mb-6'>
+				Preguntas Frecuentes
+			</h2>
+			<Accordion
+				variant='shadow'
+				selectionMode='single'
+				itemClasses={{ title: "text-gray-900 font-medium" }}>
+				{data.map((data, index: number) => (
+					<AccordionItem
+						key={index}
+						title={data.question}
+						aria-label={data.question}>
+						<p className='ml-4'>{data.answer}</p>
+					</AccordionItem>
+				))}
+			</Accordion>
+		</div>
+	);
 }

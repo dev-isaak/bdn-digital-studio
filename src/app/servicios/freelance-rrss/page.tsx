@@ -71,9 +71,6 @@ export default function RRSS() {
 				<OurServices />
 			</section>
 			<section>
-				<h2 className='uppercase font-medium text-4xl text-center my-6'>
-					Preguntas Frecuentes
-				</h2>
 				<Faq />
 			</section>
 			<ContactBlock />
