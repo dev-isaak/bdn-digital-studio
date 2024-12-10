@@ -4,13 +4,11 @@ import {
 	Head,
 	Heading,
 	Html,
-	Img,
 	Preview,
-	Section,
 	Text,
 } from "@react-email/components";
 import * as React from "react";
-import FooterEmail from "./components/footer";
+import FooterEmail from "./components/Footer";
 
 interface NotionMagicLinkEmailProps {
 	userName?: string;
