@@ -1,6 +1,7 @@
 import {
 	Button,
 	Card,
+	CardBody,
 	CardFooter,
 	CardHeader,
 	Image,
@@ -30,7 +31,7 @@ export default async function BackupBlog() {
 	const posts = await getPosts();
 
 	return (
-		<section>
+		<section className='mb-6'>
 			<div className='relative h-[300px] md:h-[450px] bg-primary text-white mb-6'>
 				<h1
 					className={`${oswald.className} absolute bottom-2 md:bottom-6 left-2 md:left-6 mb-4 text-center text-8xl md:text-[200px] font-semibold`}>
@@ -42,32 +43,29 @@ export default async function BackupBlog() {
 					<Card
 						key={index}
 						isFooterBlurred
-						className='w-[300px] h-[400px] col-span-12 sm:col-span-5 relative'>
-						<CardHeader className='absolute z-20 top-1 flex-col items-start'>
-							<h4 className='text-white font-medium text-2xl'>{post.title}</h4>
-						</CardHeader>
-
-						<div className='relative w-full h-full overflow-hidden'>
+						className='w-[350px] h-[500px] col-span-12 sm:col-span-5 relative '>
+						<CardHeader className='z-20 top-1 flex-col items-start'>
 							<Image
 								removeWrapper
 								alt={post.featuredImage.node.altText}
-								className='z-0 w-full h-full scale-125 -translate-y-6 object-cover'
+								className=' w-full h-full object-cover  filter grayscale'
 								src={post.featuredImage.node.mediaItemUrl}
 							/>
-							<div className='absolute inset-0 bg-gray-900 opacity-40 z-10'></div>
-						</div>
-
-						<CardFooter className='absolute flex-col gap-4 bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-20 justify-between'>
-							<div>
-								<p className='text-black text-tiny'>
-									{truncateText(post.content.replace(/(<([^>]+)>)/gi, ""), 185)}
-								</p>
-							</div>
+						</CardHeader>
+						<CardBody>
+							<h4 className='font-medium text-xl'>{post.title}</h4>
+							<div className='relative w-full h-full overflow-hidden'></div>
+							<p className='text-black text-tiny'>
+								{truncateText(post.content.replace(/(<([^>]+)>)/gi, ""), 185)}
+							</p>
+						</CardBody>
+						<CardFooter>
 							<Button
 								as={Link}
 								href={`/blog/${post.slug}`}
-								className='text-tiny'
+								className=''
 								color='primary'
+								variant='bordered'
 								endContent={<FaArrowRightLong />}
 								size='md'>
 								Ir al post
