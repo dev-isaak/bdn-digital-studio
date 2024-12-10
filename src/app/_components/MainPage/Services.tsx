@@ -42,9 +42,17 @@ export default function Services() {
 			<RenderColumnText
 				title='Optimización de Sitios Web'
 				text='Aumenta la velocidad y la eficiencia de tu sitio con nuestro servicio de optimización WordPress. En BDN Digital Studio, ajustamos plugins, temas y configuraciones para maximizar el rendimiento. Además, trabajamos con soluciones a medida en otros frameworks, como React o Astro, para garantizar una web rápida, segura y preparada para destacar en los resultados de búsqueda.'
-				image='building1.webp'
+				image='building11.webp'
 				alt='Edificio arquitectónico'
 				href='/servicios/freelance-optimizacion-web'
+			/>
+			<RenderColumnText
+				title='Gestión de Redes Sociales'
+				text='Impulsa la presencia digital de tu marca con nuestra gestión profesional de redes sociales en BDN Digital Studio. Creamos contenido atractivo, planificamos estrategias efectivas y gestionamos campañas publicitarias para conectar con tu audiencia ideal. Nuestro enfoque personalizado garantiza que tu marca destaque y logre resultados medibles en plataformas como Instagram, Facebook y LinkedIn.'
+				image='building12.webp'
+				alt='Edificio arquitectónico'
+				revert
+				href='/servicios/freelance-rrss'
 			/>
 		</div>
 	);
