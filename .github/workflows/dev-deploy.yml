@@ -23,8 +23,8 @@ jobs:
           node-version: lts/*
 
       - name: Install react email
-        run: cd react-email-start && npm i 
-        
+        run: cd react-email-starter && npm i 
+
       - name: Install step
         run: npm install
 
