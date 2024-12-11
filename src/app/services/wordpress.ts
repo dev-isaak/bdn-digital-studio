@@ -7,7 +7,6 @@ interface WPGraphQLParams {
 
 export async function wpquery({ query, variables = {} }: WPGraphQLParams) {
   const res = await fetch(HEADLESS_CMS_GQL, {
-    cache: "force-cache",
     method: "post",
     headers: {
       "Content-Type": "application/json",
