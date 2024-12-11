@@ -15,13 +15,13 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
-  const { name, lastname, email, message, telf, web } = req.body;
+  const { name, lastname, email, description, telf, web } = req.body;
 
   const studioEmailPromise = emailToStudioAfterContact({
     resend,
     name,
     lastName: lastname,
-    message,
+    description,
     phone: telf,
     companyName: web,
     email,

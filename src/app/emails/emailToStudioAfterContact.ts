@@ -5,7 +5,7 @@ interface emailProps {
   email: string;
   phone: string;
   companyName: string;
-  message: string;
+  description: string;
 }
 
 export const emailToStudioAfterContact = async ({
@@ -15,7 +15,7 @@ export const emailToStudioAfterContact = async ({
   email,
   phone,
   companyName,
-  message,
+  description,
 }: emailProps) => {
   try {
     const res = await resend.emails.send({
@@ -27,7 +27,7 @@ export const emailToStudioAfterContact = async ({
   <p><strong>Email</strong>: ${email}</p>
   <p><strong>Phone</strong>: ${phone}</p>
   <p><strong>Company Name</strong>: ${companyName}</p>
-  <p><strong>Message</strong>: ${message}</p>
+  <p><strong>Message</strong>: ${description}</p>
   `,
     });
     if (res.error === null) return true;
