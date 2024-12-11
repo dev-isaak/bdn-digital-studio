@@ -11,9 +11,19 @@
   margin: 1rem 0;
 }
 
+#blog-post a {
+  transition: all 300ms;
+  text-decoration: underline;
+}
+
+#blog-post a:hover {
+  text-decoration: none;
+}
+
 #blog-post h2 {
   font-size: 2rem;
   margin: 1rem 0;
+  margin-bottom: 2rem;
   font-weight: 600;
 }
 
@@ -37,14 +47,22 @@
 
 #blog-post ul {
   margin: 2rem;
+  margin-top: 1rem;
   list-style: circle;
 }
 
 #blog-post img {
-  max-width: 700px;
-  height: 400px;
+  width: 350px;
+  height: 250px;
   margin: 4rem auto;
   border-radius: 10px;
+}
+
+@media(min-width:768px) {
+  #blog-post img {
+    width: 700px;
+    height: 400px;
+  }
 }
 
 #blog-post .cta-banner {
@@ -97,6 +115,8 @@
   padding: .5rem 2rem;
   margin-top: 1rem;
   transition: all 300ms;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 #blog-post .cta-banner a:hover {

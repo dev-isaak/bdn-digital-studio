@@ -67,7 +67,7 @@ export default function ContactForm() {
 
 		if (!data.terms) {
 			setErrors({ ...errors, terms: "Please accept the terms" });
-
+			setIsLoading(false);
 			return;
 		}
 
