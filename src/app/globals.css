@@ -14,14 +14,37 @@
 #blog-post h2 {
   font-size: 2rem;
   margin: 1rem 0;
+  font-weight: 600;
+}
+
+#blog-post h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  /* Ancho de la línea */
+  height: 3px;
+  /* Grosor de la línea */
+  background-color: #383838;
+  /* Color de la línea */
+  margin: 0;
+  /* Espaciado superior e inferior */
 }
 
 #blog-post h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 500 !important;
 }
 
 #blog-post ul {
   margin: 2rem;
+  list-style: circle;
+}
+
+#blog-post img {
+  max-width: 700px;
+  height: 400px;
+  margin: 4rem auto;
+  border-radius: 10px;
 }
 
 @media (min-width: 768px) {
