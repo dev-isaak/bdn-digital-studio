@@ -17,9 +17,6 @@ export default function Cookies() {
 	};
 
 	const handleSaveConfigCookies = () => {
-		window.gtag("consent", "update", {
-			analytics_storage: isSwitchEnabled ? "granted" : "denied",
-		});
 		setLocalStorage("cookie_consent", isSwitchEnabled);
 		setDisabledConfigButton(true);
 		succesToast("Tu configuración de cookies se ha guardado.");
