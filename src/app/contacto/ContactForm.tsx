@@ -109,6 +109,7 @@ export default function ContactForm() {
 
 	return (
 		<Form
+			id='contact-form' // used in GA4
 			className='max-w-2xl m-auto items-center my-10'
 			validationBehavior='native'
 			validationErrors={errors}

@@ -31,11 +31,6 @@ export default function BannerCookies() {
 	useEffect(() => {
 		if (cookieConsent === null) return;
 
-		// Actualiza el modo de consentimiento en Google Analytics
-		window.gtag("consent", "update", {
-			analytics_storage: cookieConsent ? "granted" : "denied",
-		});
-
 		// Almacena el consentimiento en localStorage
 		setLocalStorage("cookie_consent", cookieConsent);
 
