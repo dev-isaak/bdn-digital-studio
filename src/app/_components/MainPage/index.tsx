@@ -11,12 +11,12 @@ export default function MainPage() {
 	return (
 		<div>
 			<header>
-				<div className='flex flex-col md:flex-row w-full h-screen bg-primary top-0'>
+				<section className='flex flex-col md:flex-row w-full h-screen bg-primary top-0'>
 					{/* Left Section */}
 					<AnimatedTitle />
 					{/* Right Section */}
 					<AnimatedHeroText />
-				</div>
+				</section>
 			</header>
 			<div className='m-auto max-w-7xl px-4 flex flex-col gap-10 my-10'>
 				<section>
