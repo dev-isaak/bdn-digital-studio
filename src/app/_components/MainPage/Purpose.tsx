@@ -15,6 +15,25 @@ export default function Purpose() {
 		isMobile ? [250, -600] : [550, -900]
 	);
 
+	const RenderDiv = ({
+		children,
+		x,
+	}: {
+		children: React.ReactNode;
+		x: number;
+	}) => {
+		return isMobile ? (
+			<div>{children}</div>
+		) : (
+			<motion.div
+				initial={{ x }}
+				whileInView={{ x: 0 }}
+				transition={{ duration: 0.5, ease: "easeInOut" }}>
+				{children}
+			</motion.div>
+		);
+	};
+
 	return (
 		<div>
 			<Heading
@@ -23,10 +42,7 @@ export default function Purpose() {
 			/>
 			<div className='flex flex-wrap justify-center'>
 				<div className='mt-6 flex flex-col gap-4 max-w-lg m-auto'>
-					<motion.div
-						initial={{ x: -400 }}
-						whileInView={{ x: 0 }}
-						transition={{ duration: 0.5, ease: "easeInOut" }}>
+					<RenderDiv x={-400}>
 						<p>
 							Imagina esto: <strong>tienes una visión</strong>. Un negocio, una
 							marca, un sueño que quieres llevar más allá. Tal vez estás
@@ -53,7 +69,7 @@ export default function Purpose() {
 							digital adecuada para reflejarlo. Y aquí es donde entra nuestra
 							especialidad.
 						</p>
-					</motion.div>
+					</RenderDiv>
 				</div>
 				<motion.div style={{ translateY: y }}>
 					<Image
@@ -79,12 +95,8 @@ export default function Purpose() {
 							alt='Imagen de un edificio arquitectónico'
 						/>
 					</motion.div>
-					{/* <div> */}
 					<div className='mt-6 flex flex-col gap-4 max-w-lg m-auto'>
-						<motion.div
-							initial={{ x: 400 }}
-							whileInView={{ x: 0 }}
-							transition={{ duration: 0.5, ease: "easeInOut" }}>
+						<RenderDiv x={400}>
 							<p>
 								Nos gusta pensar en nuestra labor como la de un{" "}
 								<strong>arquitecto</strong>. Tal como el diseño de un edificio
@@ -122,9 +134,8 @@ export default function Purpose() {
 									directamente a tu audiencia.
 								</li>
 							</ul>
-						</motion.div>
+						</RenderDiv>
 					</div>
-					{/* </div> */}
 				</div>
 			</div>
 		</div>
