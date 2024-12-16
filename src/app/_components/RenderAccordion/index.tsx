@@ -1,5 +1,6 @@
 "use client";
 import { Accordion, AccordionItem } from "@nextui-org/react";
+import Heading from "../Heading";
 
 interface DataList {
 	question: string;
@@ -11,13 +12,12 @@ interface RenderAccordionProps {
 
 export default function RenderAccordion({ data }: RenderAccordionProps) {
 	return (
-		<div className='m-auto max-w-3xl my-8'>
-			<h2 className='uppercase font-medium text-4xl text-center mb-6'>
-				Preguntas Frecuentes
-			</h2>
+		<div className='m-auto max-w-3xl'>
+			<Heading firstText="FAQ's" secondText='Preguntas Frecuentes' />
 			<Accordion
-				variant='shadow'
+				variant='light'
 				selectionMode='single'
+				className='mt-4'
 				itemClasses={{ title: "text-gray-900 font-medium" }}>
 				{data.map((data, index: number) => (
 					<AccordionItem
