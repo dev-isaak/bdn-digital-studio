@@ -1,4 +1,5 @@
 import { Divider } from "@nextui-org/react";
+import { Logo } from "../icons/LogoWhite";
 
 export default function Footer() {
 	const legalRoutes = [
@@ -43,15 +44,13 @@ export default function Footer() {
 		<footer
 			className={`w-full bg-gray-800
 			 flex justify-center items-center`}>
-			<div className='w-full bg-transparent text-center'>
-				<h2 className='mt-4 text-white'>
-					<a
-						id='logo'
-						href='/'
-						className='text-white-light no-underline transition-all duration-300 hover:text-white-strong text-xl font-semibold'>
-						BDN Digital Studio
-					</a>
-				</h2>
+			<div className='w-full bg-transparent flex flex-col items-center'>
+				<a
+					id='logo'
+					href='/'
+					className='text-white-light no-underline transition-all duration-300 hover:text-white-strong text-xl font-semibold mt-4'>
+					<Logo />
+				</a>
 				<div className='my-4 max-w-lg m-auto px-4'>
 					<h3 className='text-white-light font-semibold text-left'>
 						Servicios
