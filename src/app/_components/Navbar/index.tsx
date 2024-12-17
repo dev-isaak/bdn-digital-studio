@@ -4,7 +4,7 @@ import {
 	NavbarContent,
 	NavbarItem,
 } from "@nextui-org/react";
-import { Logo } from "../icons/Logo";
+import { Logo } from "../icons/LogoBlack";
 import DesktopMenu from "./Desktop/DesktopMenu";
 import MobileMenu from "./Mobile/MobileMenu";
 import ContactButton from "./ContactButton";
