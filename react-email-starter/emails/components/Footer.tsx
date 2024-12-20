@@ -1,4 +1,5 @@
 import { Section, Text } from "@react-email/components";
+import Logo from "./Logo";
 
 export const FooterEmail = () => {
 	return (
@@ -6,7 +7,8 @@ export const FooterEmail = () => {
 			<table style={{ width: "100%", textAlign: "center" }}>
 				<tr>
 					<td>
-						<Text
+						<Logo />
+						{/* <Text
 							style={{
 								fontSize: "14px",
 								fontWeight: "bold",
@@ -15,7 +17,7 @@ export const FooterEmail = () => {
 								marginBottom: "0px",
 							}}>
 							BDN Digital Studio
-						</Text>
+						</Text> */}
 						<Text style={{ fontSize: "13px", color: "#666", margin: "0 0 " }}>
 							Éxito, Futuro, Digital
 						</Text>

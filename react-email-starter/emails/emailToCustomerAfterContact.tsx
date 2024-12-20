@@ -4,6 +4,7 @@ import {
 	Head,
 	Heading,
 	Html,
+	Img,
 	Preview,
 	Text,
 } from "@react-email/components";
@@ -22,13 +23,13 @@ export const EmailToCustomerAfterContact = ({
 		<Preview>BDN Digital Studio | ¡Gracias por contactarnos!</Preview>
 		<Body style={main}>
 			<Container style={container}>
-				{/* <Img
+				<Img
 					alt='Imagen de cabecera'
 					width='100%'
 					height='300'
-					src='/static/building-email.png'
+					src='https://pantalla-digital.com/wp-content/uploads/2024/12/5395.jpg'
 					style={image}
-				/> */}
+				/>
 				<Heading style={h1}>
 					¡Hola {userName}, gracias por contactarnos!
 				</Heading>
