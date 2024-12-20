@@ -17,9 +17,9 @@ export default function RenderNavbar() {
 			</NavbarContent>
 
 			{/* Mobile Logo  */}
-			<div className='sm:hidden'>
+			{/* <div className='sm:hidden'>
 				<Logo />
-			</div>
+			</div> */}
 
 			{/* Desktop Navbar  */}
 			<DesktopMenu />
