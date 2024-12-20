@@ -14,7 +14,7 @@ export default function DesktopMenu() {
 				<Logo />
 			</NavbarBrand>
 
-			<NavbarItem>
+			<NavbarItem className='ml-10'>
 				<Link color='foreground' href='/'>
 					Inicio
 				</Link>
