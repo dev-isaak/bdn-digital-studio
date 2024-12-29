@@ -25,11 +25,14 @@ export default function RRSS() {
 					imageURL='/assets/images/building12.webp'
 					altText='Edificio arquitectónico'>
 					<p>
-						En <strong>BDN Digital Studio</strong>, entendemos que gestionar
-						redes sociales de manera efectiva requiere estrategia, creatividad y
-						análisis continuo. Nuestro equipo se especializa en transformar tus
-						redes sociales en herramientas poderosas para conectar con tu
-						audiencia y alcanzar tus objetivos empresariales.
+						En <strong>BDN Digital Studio</strong>, sabemos que gestionar redes
+						sociales puede ser abrumador y consumir tiempo valioso. Si sientes
+						que tus esfuerzos no generan resultados, que no conectas con tu
+						audiencia ideal, o que te faltan estrategias claras para destacar
+						entre la competencia, estamos aquí para ayudarte. Combinamos
+						estrategia, creatividad y análisis continuo para transformar tus
+						redes sociales en una herramienta efectiva que impulsa tu marca y
+						genera resultados reales.
 					</p>
 				</TwoBlockGrid>
 			</section>

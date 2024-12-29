@@ -48,7 +48,7 @@ export default async function BackupBlog() {
 							<Image
 								removeWrapper
 								alt={post.featuredImage.node.altText}
-								className=' w-full h-full object-cover  filter grayscale'
+								className=' w-full h-[200px] object-cover  filter grayscale'
 								src={post.featuredImage.node.mediaItemUrl}
 							/>
 						</CardHeader>
