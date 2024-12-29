@@ -1,5 +1,6 @@
 import { Divider } from "@nextui-org/react";
 import { Logo } from "../icons/LogoWhite";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
 	const legalRoutes = [
@@ -67,8 +68,15 @@ export default function Footer() {
 						))}
 					</div>
 				</div>
+				<div className='mt-6'>
+					<a
+						href='https://www.linkedin.com/company/bdn-digital-studio'
+						target='_blank'>
+						<FaLinkedin color='white' size={24} />
+					</a>
+				</div>
 
-				<div className='mt-16 mb-4 flex justify-center gap-4'>
+				<div className='mt-4 mb-4 flex justify-center gap-4'>
 					{legalRoutes.map((route) => (
 						<a
 							key={route.href}
