@@ -1,15 +1,18 @@
 import { emailToCustomerAfterContact } from "@/app/emails/emailToCustomerAfterContact";
 import { emailToStudioAfterContact } from "@/app/emails/emailToStudioAfterContact";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { Resend } from "resend";
+import formData from 'form-data'
+import Mailgun from 'mailgun.js'
+
+const mailgun = new Mailgun(formData);
 
 type ResponseData = {
   message: string;
 };
 
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
+console.log(process.env.MAILGUN_API_KEY)
 
-const resend = new Resend(RESEND_API_KEY);
+const mg = mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY || 'key-yourkeyhere', url: 'https://api.eu.mailgun.net' });
 
 export default async function handler(
   req: NextApiRequest,
@@ -18,7 +21,7 @@ export default async function handler(
   const { name, lastname, email, description, telf, web } = req.body;
 
   const studioEmailPromise = emailToStudioAfterContact({
-    resend,
+    mg,
     name,
     lastName: lastname,
     description,
@@ -28,7 +31,7 @@ export default async function handler(
   });
 
   const customerEmailPromise = emailToCustomerAfterContact({
-    resend,
+    mg,
     email,
     name,
   });

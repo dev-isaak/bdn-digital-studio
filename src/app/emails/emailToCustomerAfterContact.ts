@@ -1,22 +1,24 @@
 import EmailToCustomerAfterContact from "../../../react-email-starter/emails/emailToCustomerAfterContact";
+import { render } from "@react-email/render";
 
 interface EmailProps {
-  resend: any;
+  mg: any;
   email: string;
   name: string;
 }
 
 export const emailToCustomerAfterContact = async ({
-  resend,
+  mg,
   email,
   name,
 }: EmailProps) => {
+  const htmlContent = await render(EmailToCustomerAfterContact({ userName: name }))
   try {
-    const res = await resend.emails.send({
-      from: "hola@bdndigitalstudio.com",
+    const res = await mg.messages.create('bdndigitalstudio.com', {
+      from: "BDN Digital Studio <hola@bdndigitalstudio.com>",
       to: [email],
       subject: "BDN Digital Studio | ¡Gracias por contactarnos!",
-      react: EmailToCustomerAfterContact({ userName: name })
+      html: htmlContent
     });
     if (res.error === null) return true;
   } catch (error) {
