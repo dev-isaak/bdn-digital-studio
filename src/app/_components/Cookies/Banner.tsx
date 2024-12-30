@@ -67,7 +67,7 @@ export default function BannerCookies() {
 			isDismissable={false}
 			hideCloseButton={true}
 			isKeyboardDismissDisabled={true}>
-			<ModalContent>
+			<ModalContent className='max-h-screen overflow-y-scroll'>
 				<ModalHeader className='flex flex-col gap-1'>
 					Información sobre cookies 🍪
 				</ModalHeader>

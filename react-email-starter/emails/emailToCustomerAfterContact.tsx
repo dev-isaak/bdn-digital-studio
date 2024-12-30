@@ -26,7 +26,7 @@ export const EmailToCustomerAfterContact = ({
 				<Img
 					alt='Imagen de cabecera'
 					width='100%'
-					height='300'
+					height='200'
 					src='https://pantalla-digital.com/wp-content/uploads/2024/12/5395.jpg'
 					style={image}
 				/>
