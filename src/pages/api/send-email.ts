@@ -10,9 +10,7 @@ type ResponseData = {
   message: string;
 };
 
-console.log(process.env.MAILGUN_API_KEY)
-
-const mg = mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY || 'key-yourkeyhere', url: 'https://api.eu.mailgun.net' });
+const mg = mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY || process.env.NETLIFY_EMAILS_PROVIDER_API_KEY || 'key-yourkeyhere', url: 'https://api.eu.mailgun.net' });
 
 export default async function handler(
   req: NextApiRequest,
