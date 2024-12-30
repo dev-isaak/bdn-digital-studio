@@ -1,5 +1,5 @@
 interface emailProps {
-  resend: any;
+  mg: any;
   name: string;
   lastName: string;
   email: string;
@@ -9,7 +9,7 @@ interface emailProps {
 }
 
 export const emailToStudioAfterContact = async ({
-  resend,
+  mg,
   name,
   lastName,
   email,
@@ -18,8 +18,8 @@ export const emailToStudioAfterContact = async ({
   description,
 }: emailProps) => {
   try {
-    const res = await resend.emails.send({
-      from: "hola@bdndigitalstudio.com",
+    const res = await mg.messages.create('bdndigitalstudio.com', {
+      from: "BDN Digital Studio <hola@bdndigitalstudio.com>",
       to: ["isaac.montenegro1992@gmail.com", "hola@bdndigitalstudio.com"],
       subject: "BDN Digital Studio | Formulario de contacto",
       html: `
