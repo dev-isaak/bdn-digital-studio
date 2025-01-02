@@ -10,11 +10,20 @@ export default function MobileMenu() {
 				<div className='sm:hidden justify-self-end'>
 					<Logo />
 				</div>
-				<Link className='w-full mt-2' color='foreground' href='/' size='lg'>
+				<Link className='w-full mt-6' color='foreground' href='/' size='lg'>
 					Inicio
 				</Link>
 			</NavbarMenuItem>
 			<DropDownMobile />
+			<NavbarMenuItem>
+				<Link
+					className='w-full mt-2'
+					color='foreground'
+					href='/casos-de-exito'
+					size='lg'>
+					Casos de éxito
+				</Link>
+			</NavbarMenuItem>
 			<NavbarMenuItem>
 				<Link className='w-full mt-2' color='foreground' href='/blog' size='lg'>
 					Blog

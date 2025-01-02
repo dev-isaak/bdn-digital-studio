@@ -21,6 +21,11 @@ export default function DesktopMenu() {
 			</NavbarItem>
 			<DropDownDesktop />
 			<NavbarItem>
+				<Link color='foreground' href='/casos-de-exito'>
+					Casos de éxito
+				</Link>
+			</NavbarItem>
+			<NavbarItem>
 				<Link color='foreground' href='/blog'>
 					Blog
 				</Link>
