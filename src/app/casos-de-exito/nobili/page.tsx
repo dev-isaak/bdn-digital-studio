@@ -44,7 +44,7 @@ export default function NobiliPage() {
 					/>
 				</div>
 			</div>
-			<div className='w-full pb-10 bg-gradient-to-b from-[#a1bca9] to-black '>
+			<div className='w-full pb-10 bg-gradient-to-b from-[#a1bca9] to-black relative '>
 				<motion.div
 					initial={{ x: "-100%", opacity: 0 }}
 					animate={{ x: 0, opacity: 1 }}
@@ -83,6 +83,14 @@ export default function NobiliPage() {
 							className='rounded-none rounded-b-lg md:rounded-lg'
 						/>
 					</motion.div>
+				</div>
+				<div className='absolute right-0 bottom-0'>
+					<Image
+						alt='hojas'
+						src='/assets/images/group089.png'
+						width={600}
+						className='rounded-none'
+					/>
 				</div>
 			</div>
 		</>
