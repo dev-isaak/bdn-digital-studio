@@ -3,6 +3,7 @@ import { Image } from "@nextui-org/react";
 import { Oswald } from "next/font/google";
 import { motion, useScroll, useTransform } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
+import Heading from "@/app/_components/Heading";
 
 const oswald = Oswald({ subsets: ["latin"] });
 export default function NobiliPage() {
@@ -12,12 +13,12 @@ export default function NobiliPage() {
 	const y = useTransform(
 		scrollYProgress,
 		[0, 1],
-		isMobile ? [0, 0] : [-120, 0]
+		isMobile ? [0, 0] : [-120, 350]
 	);
 	const ySecond = useTransform(
 		scrollYProgress,
 		[0, 1],
-		isMobile ? [0, 0] : [150, -100]
+		isMobile ? [0, 0] : [50, -500]
 	);
 	return (
 		<>
@@ -91,6 +92,100 @@ export default function NobiliPage() {
 						width={600}
 						className='rounded-none'
 					/>
+				</div>
+			</div>
+			<div className='max-w-2xl m-auto py-8 px-2'>
+				<Heading firstText='El cliente' secondText='Minimalismo italiano' />
+				<div className='max-w-xl m-auto'>
+					<p className='mb-4'>
+						Nobili, lider en fabricación de grifería para baños y cocina, que
+						combina innovación, experiencia y atención al detalle durante más de
+						60 años.
+					</p>
+					<p>
+						Sus colecciones se destacan por una identidad estilística única, un
+						alto estándar en diseño y calidad de producción, así como una
+						atención especial a la ergonomía y la eficiencia funcional.
+					</p>
+				</div>
+				<div className='mt-6'></div>
+				<Heading firstText='Objetivos' secondText='Claros y alcanzables' />
+				<div className='max-w-xl m-auto'>
+					<p className='mb-4'>
+						El principal objetivo fue desarrollar una plataforma funcional y
+						accesible que permita a los usuarios encontrar y comunicarse
+						fácilmente con la empresa en caso de una avería. Además, se buscó
+						garantizar una experiencia de usuario intuitiva, manteniendo la
+						identidad visual de la marca y su reputación de excelencia.
+					</p>
+				</div>
+			</div>
+			<Image
+				alt='hojas'
+				src='/assets/images/sole_amb_esterno_01-1.1920x0.jpg'
+				className='rounded-none'
+			/>
+			<div className='max-w-2xl m-auto py-8 px-2'>
+				<Heading firstText='Proceso' secondText='Estrategia y ejecución' />
+				<div className='max-w-xl m-auto'>
+					<p className='mb-4'>
+						El desarrollo se realizó en varias etapas, comenzando con la
+						investigación y el análisis de los requisitos del cliente.
+						Posteriormente, se definió una arquitectura adecuada para garantizar
+						escalabilidad, se crearon prototipos para validar el diseño, y se
+						implementaron las funcionalidades requeridas, seguidas de pruebas
+						exhaustivas para asegurar la calidad.
+					</p>
+				</div>
+				<div className='mt-6'></div>
+				<Heading firstText='El proyecto' secondText='Sencillo y directo' />
+				<div className='max-w-xl m-auto'>
+					<p className='mb-4'>
+						Atendiendo a los requerimientos específicos del cliente, hemos
+						trabajado en estrecha colaboración con su equipo desde el inicio del
+						proyecto, con el objetivo de proporcionar una solución efectiva a su
+						problema principal: garantizar que sus clientes puedan encontrarlos
+						y comunicarse con ellos de manera rápida y sencilla en caso de una
+						avería.
+					</p>
+					<p>
+						Para mantener la coherencia visual y reforzar la identidad de la
+						marca, se ha respetado la línea de diseño corporativa establecida en
+						su página principal. Esto incluye la implementación de un encabezado
+						limpio y profesional, junto con un formulario optimizado que cuenta
+						únicamente con los campos necesarios para cumplir con los objetivos
+						definidos.
+					</p>
+				</div>
+			</div>
+			<div className='w-full flex justify-center'>
+				<Image
+					alt='hojas'
+					src='/assets/images/group95.png'
+					className='rounded-none'
+				/>
+			</div>
+			<div className='max-w-2xl m-auto py-8 px-2'>
+				<Heading firstText='Proceso' secondText='Estrategia y ejecución' />
+				<div className='max-w-xl m-auto'>
+					<p className='mb-4'>
+						El desarrollo se realizó en varias etapas, comenzando con la
+						investigación y el análisis de los requisitos del cliente.
+						Posteriormente, se definió una arquitectura adecuada para garantizar
+						escalabilidad, se crearon prototipos para validar el diseño, y se
+						implementaron las funcionalidades requeridas, seguidas de pruebas
+						exhaustivas para asegurar la calidad.
+					</p>
+				</div>
+				<Heading firstText='Resultados' secondText='Impacto positivo' />
+				<div className='max-w-xl m-auto'>
+					<p className='mb-4'>
+						Como resultado del proyecto, se logró una plataforma intuitiva que
+						ha mejorado significativamente la interacción con los usuarios
+						finales. El cliente reporta una mayor eficiencia en la resolución de
+						problemas y una mejor experiencia para sus clientes, lo que refuerza
+						la confianza en su marca.
+					</p>
 				</div>
 			</div>
 		</>
