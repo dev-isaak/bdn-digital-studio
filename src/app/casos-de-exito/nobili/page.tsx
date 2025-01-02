@@ -21,9 +21,9 @@ export default function NobiliPage() {
 	);
 	return (
 		<>
-			<div className='w-full h-[100vh] bg-cover bg-left overflow-hidden'>
+			<div className='w-full h-[100vh] bg-cover overflow-hidden'>
 				<div
-					className='absolute inset-0 bg-cover bg-left'
+					className='absolute inset-0 bg-cover bg-center'
 					style={{
 						backgroundImage: `
 						linear-gradient(to bottom left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 90%), 
