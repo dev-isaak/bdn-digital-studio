@@ -1,7 +1,7 @@
 import { Image } from "@nextui-org/react";
 
 import Heading from "@/app/_components/Heading";
-import Content from "./content";
+import Content from "./Content";
 
 export const metadata = {
 	alternates: {
@@ -67,7 +67,7 @@ export default function NobiliPage() {
 				</div>
 			</div>
 			<Image
-				alt='hojas'
+				alt='imagen de diseño de nobili'
 				src='/assets/images/sole_amb_esterno_01-1.1920x0.jpg'
 				className='rounded-none'
 			/>
@@ -106,9 +106,10 @@ export default function NobiliPage() {
 			</div>
 			<div className='w-full flex justify-center'>
 				<Image
-					alt='hojas'
+					alt='collage de imagenes de grifería de diseño'
 					src='/assets/images/group95.png'
 					className='rounded-none'
+					width={50}
 				/>
 			</div>
 			<div className='max-w-2xl m-auto py-8 px-2'>

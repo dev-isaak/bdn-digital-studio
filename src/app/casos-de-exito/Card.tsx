@@ -19,7 +19,10 @@ export default function Card({ route, text, imageURL, list }: ICard) {
 		<>
 			<div
 				onClick={handleRedirection}
-				className={`w-full h-[500px] bg-[url("/assets/images/${imageURL}")] bg-cover bg-center cursor-pointer group relative overflow-hidden`}>
+				style={{
+					backgroundImage: `url("/assets/images/${imageURL}")`,
+				}}
+				className={`w-full h-[500px] bg-cover bg-center cursor-pointer group relative overflow-hidden`}>
 				{/* Overlay */}
 				<div className='absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100'></div>
 

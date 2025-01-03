@@ -65,7 +65,7 @@ export default function Content() {
 				<Image
 					alt='hojas'
 					src='/assets/images/group089.png'
-					width={600}
+					width={400}
 					className='rounded-none'
 				/>
 			</div>
