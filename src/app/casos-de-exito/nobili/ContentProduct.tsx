@@ -6,7 +6,7 @@ import { Image } from "@nextui-org/react";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
-export default function Content() {
+export default function ContentProduct() {
 	const { scrollYProgress } = useScroll();
 	const { isMobile } = useWindowSize();
 
