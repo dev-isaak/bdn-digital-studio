@@ -25,9 +25,9 @@ export const EmailToCustomerAfterContact = ({
 			<Container style={container}>
 				<Img
 					alt='Imagen de cabecera'
-					width='100%'
+					width='90%'
 					height='200'
-					src='https://pantalla-digital.com/wp-content/uploads/2024/12/5395.jpg'
+					src='https://pantalla-digital.com/wp-content/uploads/2025/01/Group-96-1.png'
 					style={image}
 				/>
 				<Heading style={h1}>
@@ -52,6 +52,7 @@ export default EmailToCustomerAfterContact;
 
 const image = {
 	borderRadius: "10px",
+	margin: "auto",
 };
 
 const main = {
@@ -70,7 +71,7 @@ const h1 = {
 		"-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
 	fontSize: "24px",
 	fontWeight: "bold",
-	margin: "40px 0",
+	margin: "40px 10px 0",
 	padding: "0",
 };
 
