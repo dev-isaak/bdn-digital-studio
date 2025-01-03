@@ -3,7 +3,7 @@ import { Form } from "@nextui-org/react";
 
 export default function Analytics() {
 	return (
-		<FormLayout title='¿Quieres incluir analíticas en el sitio web?'>
+		<FormLayout title='¿Quieres incluir analíticas en el sitio?'>
 			<Form></Form>
 		</FormLayout>
 	);

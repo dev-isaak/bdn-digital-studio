@@ -17,7 +17,10 @@ export default function InicioProyecto() {
 	const [formData, setFormData] = useState({
 		contact: "",
 		whatYouHaveInMind: "",
-		sections: "",
+		sections: {
+			pages: "",
+			description: "",
+		},
 		colorAndTypography: "",
 		brand: "",
 		competitors: "",
@@ -77,9 +80,15 @@ export default function InicioProyecto() {
 					<DynamicSteps />
 				</div>
 				<div className='bg-blue-200 w-full  flex flex-col gap-2 items-center justify-center'>
-					{step === 0 && <HowToBeContacted />}
-					{step === 1 && <WebType />}
-					{step === 2 && <WhichSections />}
+					{step === 0 && (
+						<HowToBeContacted formData={formData} setFormData={setFormData} />
+					)}
+					{step === 1 && (
+						<WebType formData={formData} setFormData={setFormData} />
+					)}
+					{step === 2 && (
+						<WhichSections formData={formData} setFormData={setFormData} />
+					)}
 					{step === 3 && <WebPreferences />}
 					{step === 4 && <WebVisually />}
 					{step === 5 && <Competitors />}

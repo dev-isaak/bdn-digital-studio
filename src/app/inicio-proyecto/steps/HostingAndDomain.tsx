@@ -4,7 +4,6 @@ import { RadioGroup, Radio } from "@nextui-org/react";
 export default function HostingAndDomain({ formData, setFormData }: any) {
 	const handleValue = (value: string) => {
 		setFormData({ ...formData, hostingAndDomain: value });
-		console.log("cambio", { ...formData, hostingAndDomain: value });
 	};
 
 	return (
