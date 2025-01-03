@@ -16,7 +16,13 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
-  const { name, lastname, email, description, telf, web } = req.body;
+  const { name, lastname, email, description, telf, web, seo, sem,
+    webDesign,
+    wordpressDevelopment,
+    customDevelopment,
+    webMaintenance,
+    webOptimization,
+    rrss } = req.body;
 
   const studioEmailPromise = emailToStudioAfterContact({
     mg,
@@ -26,6 +32,14 @@ export default async function handler(
     phone: telf,
     companyName: web,
     email,
+    seo,
+    sem,
+    webDesign,
+    wordpressDevelopment,
+    customDevelopment,
+    webMaintenance,
+    webOptimization,
+    rrss
   });
 
   const customerEmailPromise = emailToCustomerAfterContact({

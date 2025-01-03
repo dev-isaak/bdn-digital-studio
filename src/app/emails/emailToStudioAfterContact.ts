@@ -6,6 +6,14 @@ interface emailProps {
   phone: string;
   companyName: string;
   description: string;
+  seo: string
+  sem: string
+  webDesign: string
+  wordpressDevelopment: string,
+  customDevelopment: string,
+  webMaintenance: string,
+  webOptimization: string,
+  rrss: string
 }
 
 export const emailToStudioAfterContact = async ({
@@ -16,6 +24,14 @@ export const emailToStudioAfterContact = async ({
   phone,
   companyName,
   description,
+  seo,
+  sem,
+  webDesign,
+  wordpressDevelopment,
+  customDevelopment,
+  webMaintenance,
+  webOptimization,
+  rrss
 }: emailProps) => {
   try {
     const res = await mg.messages.create('bdndigitalstudio.com', {
@@ -26,7 +42,18 @@ export const emailToStudioAfterContact = async ({
   <p><strong>Name</strong>: ${name} ${lastName}</p>
   <p><strong>Email</strong>: ${email}</p>
   <p><strong>Phone</strong>: ${phone}</p>
-  <p><strong>Company Name</strong>: ${companyName}</p>
+  <p><strong>Company Name</strong>: ${companyName ? companyName : '-'}</p>
+  <p><strong>Interested in:</strong></p>
+  <ul>
+  <li>SEO: ${seo ? seo : '-'}</li>
+  <li>SEM: ${sem ? sem : '-'}</li>
+  <li>Web Design: ${webDesign ? webDesign : '-'}</li>
+  <li>Wordpress Development: ${wordpressDevelopment ? wordpressDevelopment : '-'}</li>
+  <li>Custom Development: ${customDevelopment ? customDevelopment : '-'}</li>
+  <li>Web Maintenance: ${webMaintenance ? webMaintenance : '-'}</li>
+  <li>Web Optimization: ${webOptimization ? webOptimization : '-'}</li>
+  <li>RRSS: ${rrss ? rrss : '-'}</li>
+  </ul>
   <p><strong>Message</strong>: ${description}</p>
   `,
     });
