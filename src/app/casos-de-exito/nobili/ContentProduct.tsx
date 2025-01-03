@@ -6,7 +6,7 @@ import { Image } from "@nextui-org/react";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
-export default function Content() {
+export default function ContentProduct() {
 	const { scrollYProgress } = useScroll();
 	const { isMobile } = useWindowSize();
 
@@ -65,7 +65,7 @@ export default function Content() {
 				<Image
 					alt='hojas'
 					src='/assets/images/group089.png'
-					width={600}
+					width={400}
 					className='rounded-none'
 				/>
 			</div>
