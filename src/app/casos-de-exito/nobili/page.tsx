@@ -13,7 +13,7 @@ export const metadata = {
 export default function NobiliPage() {
 	return (
 		<>
-			<div className='w-full h-[100vh] bg-cover overflow-hidden'>
+			<div className='w-full h-[80vh] md:h-[100vh] bg-cover overflow-hidden'>
 				<div
 					className='absolute inset-0 bg-cover bg-center'
 					style={{
@@ -36,7 +36,7 @@ export default function NobiliPage() {
 					/>
 				</div>
 			</div>
-			<div className='w-full pb-10 bg-gradient-to-b from-[#a1bca9] to-black relative '>
+			<div className='w-full pb-10 bg-gradient-to-b from-[#a1bca9] to-black relative'>
 				<ContentProduct />
 			</div>
 			<div className='max-w-2xl m-auto py-8 px-2'>
@@ -108,19 +108,19 @@ export default function NobiliPage() {
 					alt='collage de imagenes de grifería de diseño'
 					src='/assets/images/group95.png'
 					className='rounded-none'
-					width={50}
 				/>
 			</div>
 			<div className='max-w-2xl m-auto py-8 px-2'>
-				<Heading firstText='Proceso' secondText='Estrategia y ejecución' />
+				<Heading firstText='Próximos pasos' secondText='Mejoras continuas' />
+
 				<div className='max-w-xl m-auto'>
 					<p className='mb-4'>
-						El desarrollo se realizó en varias etapas, comenzando con la
-						investigación y el análisis de los requisitos del cliente.
-						Posteriormente, se definió una arquitectura adecuada para garantizar
-						escalabilidad, se crearon prototipos para validar el diseño, y se
-						implementaron las funcionalidades requeridas, seguidas de pruebas
-						exhaustivas para asegurar la calidad.
+						Estamos comprometidos con el mantenimiento y la mejora continua del
+						sistema, asegurándonos de que evolucione junto con las necesidades
+						del cliente y sus usuarios. Las próximas etapas incluirán la
+						integración de nuevas funciones, la optimización continua del
+						rendimiento y SEO local para que los clientes puedan encontrar
+						fácilmente la página de contacto.
 					</p>
 				</div>
 				<Heading firstText='Resultados' secondText='Impacto positivo' />
