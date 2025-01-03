@@ -29,6 +29,7 @@ interface ErrorProps {
 	webMaintenance: string;
 	webOptimization: string;
 	description: string;
+	rrss: string;
 }
 
 export default function ContactForm() {
@@ -49,6 +50,7 @@ export default function ContactForm() {
 		webMaintenance: "",
 		webOptimization: "",
 		description: "",
+		rrss: "",
 	});
 
 	const onSubmit = async (e: any) => {
@@ -87,6 +89,7 @@ export default function ContactForm() {
 			webMaintenance: "",
 			webOptimization: "",
 			description: "",
+			rrss: "",
 		});
 
 		const res = await fetch("/api/send-email", {
@@ -300,6 +303,19 @@ export default function ContactForm() {
 							setErrors((prev) => ({ ...prev, webOptimization: "" }))
 						}>
 						Optimización web
+					</Checkbox>
+
+					<Checkbox
+						isRequired
+						classNames={{
+							label: "text-small",
+						}}
+						isInvalid={!!errors.webOptimization}
+						name='rrss'
+						validationBehavior='aria'
+						value='true'
+						onValueChange={() => setErrors((prev) => ({ ...prev, rrss: "" }))}>
+						Redes sociales
 					</Checkbox>
 				</div>
 
