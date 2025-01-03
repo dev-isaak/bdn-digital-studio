@@ -1,6 +1,7 @@
 import { Image } from "@nextui-org/react";
 
 import Heading from "@/app/_components/Heading";
+import Content from "./content";
 
 export const metadata = {
 	alternates: {
@@ -36,7 +37,9 @@ export default function NobiliPage() {
 					/>
 				</div>
 			</div>
-			<div className='w-full pb-10 bg-gradient-to-b from-[#a1bca9] to-black relative '></div>
+			<div className='w-full pb-10 bg-gradient-to-b from-[#a1bca9] to-black relative '>
+				<Content />
+			</div>
 			<div className='max-w-2xl m-auto py-8 px-2'>
 				<Heading firstText='El cliente' secondText='Minimalismo italiano' />
 				<div className='max-w-xl m-auto'>

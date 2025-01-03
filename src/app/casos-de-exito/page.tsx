@@ -16,7 +16,7 @@ export default function CasosDeExito() {
 					<Card
 						text='Nobili'
 						route='/casos-de-exito/nobili'
-						imageURL='sole-ix-05-1.2400x0.jpg'
+						imageURL='grifo-diseno-nobili.webp'
 						list={["Wordpress"]}
 					/>
 				</div>
