@@ -1,5 +1,4 @@
 import { Image } from "@nextui-org/react";
-
 import Heading from "@/app/_components/Heading";
 import Content from "./Content";
 
