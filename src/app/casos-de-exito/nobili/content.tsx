@@ -1,8 +1,8 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import useWindowSize from "@/hooks/useWindowSize";
-import Image from "next/image";
 import { Oswald } from "next/font/google";
+import { Image } from "@nextui-org/react";
 
 const oswald = Oswald({ subsets: ["latin"] });
 
