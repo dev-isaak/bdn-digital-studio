@@ -18,13 +18,16 @@ export default function InicioProyecto() {
 		contact: "",
 		whatYouHaveInMind: "",
 		sections: {
-			pages: "",
+			pages: [],
 			description: "",
 		},
 		colorAndTypography: "",
 		brand: "",
 		competitors: "",
-		analytics: "",
+		analytics: {
+			tools: [],
+			description: "",
+		},
 		resources: "",
 		seo: "",
 		hostingAndDomain: "",
@@ -89,10 +92,18 @@ export default function InicioProyecto() {
 					{step === 2 && (
 						<WhichSections formData={formData} setFormData={setFormData} />
 					)}
-					{step === 3 && <WebPreferences />}
-					{step === 4 && <WebVisually />}
-					{step === 5 && <Competitors />}
-					{step === 6 && <Analytics />}
+					{step === 3 && (
+						<WebPreferences formData={formData} setFormData={setFormData} />
+					)}
+					{step === 4 && (
+						<WebVisually formData={formData} setFormData={setFormData} />
+					)}
+					{step === 5 && (
+						<Competitors formData={formData} setFormData={setFormData} />
+					)}
+					{step === 6 && (
+						<Analytics formData={formData} setFormData={setFormData} />
+					)}
 					{step === 7 && <Resources />}
 					{step === 8 && <SEO />}
 					{step === 9 && (

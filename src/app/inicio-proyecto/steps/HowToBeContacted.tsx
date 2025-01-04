@@ -1,5 +1,5 @@
 import FormLayout from "../FormLayout";
-import { Form, Radio, RadioGroup } from "@nextui-org/react";
+import { Radio, RadioGroup } from "@nextui-org/react";
 
 export default function HowToBeContacted({ formData, setFormData }: any) {
 	const handleValue = (value: string) => {
