@@ -11,12 +11,22 @@ export default function MainPage() {
 	return (
 		<div>
 			<header>
+				{/* 
 				<section className='flex flex-col md:flex-row w-full h-screen bg-primary top-0'>
-					{/* Left Section */}
 					<AnimatedTitle />
-					{/* Right Section */}
 					<AnimatedHeroText />
 				</section>
+				*/}
+				<video
+					autoPlay
+					className='w-full h-full'
+					muted
+					loop
+					playsInline
+					poster='hero-poster.jpg'>
+					<source src='/assets/videos/HOLA.mp4' type='video/mp4' />
+					Tu navegador no soporta videos.
+				</video>
 			</header>
 			<div className='m-auto max-w-7xl px-4 flex flex-col gap-10 my-10'>
 				<section>

@@ -11,7 +11,7 @@ import ContactButton from "./ContactButton";
 
 export default function RenderNavbar() {
 	return (
-		<Navbar isBordered shouldHideOnScroll className='fixed'>
+		<Navbar isBordered shouldHideOnScroll className='md:fixed'>
 			<NavbarContent className='sm:hidden' justify='start'>
 				<NavbarMenuToggle />
 			</NavbarContent>
