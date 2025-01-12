@@ -24,7 +24,7 @@ export default function MainPage() {
 					loop
 					playsInline
 					poster='hero-poster.jpg'>
-					<source src='/assets/videos/HOLA.mp4' type='video/mp4' />
+					<source src='/assets/videos/HOLA-HEADER.mp4' type='video/mp4' />
 					Tu navegador no soporta videos.
 				</video>
 			</header>
