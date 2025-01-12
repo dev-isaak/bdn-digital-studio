@@ -22,7 +22,7 @@ export default function ContentProduct() {
 	);
 	return (
 		<>
-			<motion.div
+			{/* <motion.div
 				initial={{ x: "-100%", opacity: 0 }}
 				animate={{ x: 0, opacity: 1 }}
 				transition={{
@@ -42,8 +42,8 @@ export default function ContentProduct() {
 						NOBILI
 					</p>
 				</div>
-			</motion.div>
-			<div className='p-2 pt-16 md:pt-32 flex flex-col md:flex-row justify-around items-center gap-0'>
+			</motion.div> */}
+			{/* <div className='p-2 pt-16 md:pt-32 flex flex-col md:flex-row justify-around items-center gap-0'>
 				<motion.div style={{ translateY: ySecond }}>
 					<Image
 						alt='captura de página web de servicio técnico nobili'
@@ -60,15 +60,51 @@ export default function ContentProduct() {
 						className='rounded-none rounded-b-lg md:rounded-lg'
 					/>
 				</motion.div>
+			</div> */}
+			<div className='max-w-[1200px] m-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32'>
+				{/* Imágenes */}
+				<div className='order-2 md:order-1 p-2'>
+					<Image
+						alt='captura de página web de servicio técnico nobili'
+						src='/assets/images/nobili1.png'
+						className='rounded-none'
+						width={600}
+					/>
+					<Image
+						width={600}
+						alt='captura de página web de servicio técnico nobili'
+						src='/assets/images/nobili2.png'
+						className='rounded-none'
+					/>
+				</div>
+
+				{/* Texto */}
+				<div className='order-1 md:order-2 text-white max-w-[600px]'>
+					<div className='md:absolute md:h-[900px] max-w-[550px]'>
+						<div className='md:sticky md:top-8 p-2'>
+							<h3 className='text-lg font-medium'>Sencillez y eficacia</h3>
+							<p>
+								Con un enfoque minimalista, eliminamos todas las distracciones
+								innecesarias para resaltar lo verdaderamente importante: un
+								formulario intuitivo y altamente eficiente que se centra en
+								resolver directamente las necesidades de nuestro cliente. Este
+								formulario no solo recopila la información clave de manera
+								rápida y sencilla, sino que también envía los datos por correo
+								de forma automática.
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div className='absolute right-0 bottom-0'>
+
+			{/* <div className='absolute right-0 bottom-0'>
 				<Image
 					alt='hojas'
 					src='/assets/images/group089.png'
 					width={400}
 					className='rounded-none'
 				/>
-			</div>
+			</div> */}
 		</>
 	);
 }
