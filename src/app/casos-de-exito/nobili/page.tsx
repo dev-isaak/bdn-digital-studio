@@ -13,7 +13,14 @@ export const metadata = {
 export default function NobiliPage() {
 	return (
 		<>
-			<div className='w-full h-[80vh] md:h-[100vh] bg-cover overflow-hidden'>
+			<Image
+				radius='none'
+				src='/assets/images/nobili-header.webp'
+				width='100%'
+				height='100%'
+				alt='fondo con letras grandes de nobili y un grifo de diseño'
+			/>
+			{/* <div className='w-full h-[80vh] md:h-[100vh] bg-cover overflow-hidden'>
 				<div
 					className='absolute inset-0 bg-cover bg-center'
 					style={{
@@ -35,8 +42,8 @@ export default function NobiliPage() {
 						className='rounded-none transform hover:scale-110 transition-all duration-500 ease-in-out right-[60%] top-[40%]'
 					/>
 				</div>
-			</div>
-			<div className='w-full pb-10 bg-gradient-to-b from-[#a1bca9] to-black relative'>
+			</div> */}
+			<div className='w-full py-10 bg-[#0d0d0d]'>
 				<ContentProduct />
 			</div>
 			<div className='max-w-2xl m-auto py-8 px-2'>
