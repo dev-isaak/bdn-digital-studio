@@ -1,6 +1,6 @@
 import { Divider } from "@nextui-org/react";
 import { Logo } from "../icons/LogoWhite";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
 	const legalRoutes = [
@@ -68,11 +68,16 @@ export default function Footer() {
 						))}
 					</div>
 				</div>
-				<div className='mt-6'>
+				<div className='mt-6 flex gap-4'>
 					<a
 						href='https://www.linkedin.com/company/bdn-digital-studio'
 						target='_blank'>
 						<FaLinkedin color='white' size={24} />
+					</a>
+					<a
+						href='https://www.instagram.com/bdn_digital_studio'
+						target='_blank'>
+						<FaInstagram color='white' size={24} />
 					</a>
 				</div>
 
