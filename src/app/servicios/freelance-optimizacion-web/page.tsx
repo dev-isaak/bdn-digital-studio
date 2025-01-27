@@ -17,7 +17,7 @@ export default function WebOptimizacion() {
 	return (
 		<div className='flex flex-col gap-10 mb-10'>
 			<h1 className='uppercase text-4xl font-semibold text-gray-800'>
-				Optimización de Sitios Web
+				Optimización de páginas Web
 			</h1>
 			<section>
 				<TwoBlockGrid
@@ -27,10 +27,9 @@ export default function WebOptimizacion() {
 						En <strong>BDN Digital Studio</strong>, sabemos que un sitio web
 						rápido y eficiente es clave para el éxito digital. No importa si tu
 						web está creada en <strong>WordPress</strong> o con otros frameworks
-						como <strong>React</strong> o <strong>Astro</strong>, nuestra
-						experiencia en optimización garantiza que tu página cargue más
-						rápido, sea más segura y ofrezca una mejor experiencia a tus
-						usuarios.
+						o herramientas, nuestra experiencia en optimización garantiza que tu
+						página cargue más rápido, sea más segura y ofrezca una mejor
+						experiencia a tus usuarios.
 					</p>
 					<p>
 						La <strong>optimización web</strong> no solo mejora el rendimiento
@@ -210,6 +209,7 @@ export default function WebOptimizacion() {
 						<ul>
 							<li>Implementación de etiquetas meta optimizadas.</li>
 							<li>Corrección de errores de indexación.</li>
+							<li>Estudio de palabras clave.</li>
 							<li>Optimización del mapa del sitio (XML sitemap).</li>
 							<li>Uso correcto de etiquetas H1, H2, etc.</li>
 						</ul>
