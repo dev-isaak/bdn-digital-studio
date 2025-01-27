@@ -18,7 +18,7 @@ export const metadata = {
 	alternates: {
 		canonical: `https://bdndigitalstudio.com/blog`,
 	},
-	title: `Blog | BDN Digital Studio`,
+	title: `Blog de noticias de desarrollo web | BDN Digital Studio`,
 	description: `En el blog de BDN Digital Studio encontrarás todas las noticias relacionadas con el mundo digital. SEO, desarrollo web, redes sociales... ¡Y mucho más! .`,
 };
 

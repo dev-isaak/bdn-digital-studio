@@ -44,7 +44,7 @@ export default function DropDownDesktop() {
 						color='foreground'
 						href='/servicios/freelance-sem'
 						className='w-full'>
-						Posicionamiento SEM
+						Campañas SEM
 					</Link>
 				</DropdownItem>
 				<DropdownItem key='desarrollo_web'>
@@ -52,7 +52,7 @@ export default function DropDownDesktop() {
 						color='foreground'
 						href='/servicios/freelance-desarrollo-web'
 						className='w-full'>
-						Desarrollo Web
+						Diseño y desarrollo web
 					</Link>
 				</DropdownItem>
 				<DropdownItem key='optimizacion_web'>
@@ -60,7 +60,7 @@ export default function DropDownDesktop() {
 						color='foreground'
 						href='/servicios/freelance-optimizacion-web'
 						className='w-full'>
-						Optimización Web
+						Optimización de páginas web
 					</Link>
 				</DropdownItem>
 				<DropdownItem key='mantenimiento_web' className='w-full'>
@@ -68,17 +68,17 @@ export default function DropDownDesktop() {
 						color='foreground'
 						href='/servicios/freelance-mantenimiento-web'
 						className='w-full'>
-						Mantenimiento Web
+						Mantenimiento de páginas web
 					</Link>
 				</DropdownItem>
-				<DropdownItem key='gestion_rss'>
+				{/* <DropdownItem key='gestion_rss'>
 					<Link
 						color='foreground'
 						href='/servicios/freelance-rrss'
 						className='w-full'>
 						Redes Sociales
 					</Link>
-				</DropdownItem>
+				</DropdownItem> */}
 			</DropdownMenu>
 		</Dropdown>
 	);

@@ -8,7 +8,7 @@ interface HeadingProps {
 export default function Heading({ firstText, secondText }: HeadingProps) {
 	return (
 		<h2 className='font-thin text-2xl mb-4'>
-			{firstText}
+			{firstText}{" "}
 			<span className='block uppercase font-[500] text-4xl'>{secondText}</span>
 		</h2>
 	);

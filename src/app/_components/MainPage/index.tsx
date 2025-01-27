@@ -29,6 +29,17 @@ export default function MainPage() {
 				</video>
 			</header>
 			<div className='m-auto max-w-7xl px-4 flex flex-col gap-10 my-10'>
+				<h1 className='text-6xl'>
+					Agencia de creación de páginas web profesionales - Desarrollo y diseño
+					web SEO
+				</h1>
+				<p>
+					Somos expertos en soluciones digitales para impulsar tu negocio en
+					línea. Ofrecemos servicios de desarrollo web, diseño web creativo,
+					optimización de WordPress y estrategias SEO personalizadas para
+					mejorar tu visibilidad en internet. ¡Haz crecer tu presencia online
+					con nosotros!
+				</p>
 				<section>
 					<FirstSection />
 				</section>
