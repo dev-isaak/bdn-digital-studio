@@ -10,7 +10,7 @@ export default function Services() {
 	return (
 		<div className='flex flex-col gap-4'>
 			<RenderColumnText
-				title='Posicionamiento orgánico (SEO)'
+				title='Agencia de SEO local'
 				text='Impulsamos tu presencia digital con estrategias avanzadas de SEO y SEM. Mejoramos el posicionamiento orgánico de tu web en buscadores y gestionamos campañas publicitarias para maximizar tu alcance. Ya sea tráfico orgánico o de pago, diseñamos soluciones personalizadas para atraer más visitantes y aumentar tus conversiones.'
 				image='building1.webp'
 				alt='Edificio arquitectónico'
@@ -25,35 +25,35 @@ export default function Services() {
 				href='/servicios/freelance-sem'
 			/>
 			<RenderColumnText
-				title='Desarrollo Web a Medida y en WordPress'
-				text='En BDN Digital Studio, ofrecemos soluciones de desarrollo web en Barcelona, desde sitios en WordPress hasta proyectos personalizados con tecnologías como React y Astro. Creamos páginas atractivas, funcionales y adaptadas a tus necesidades. Nuestro enfoque combina diseño, rendimiento y tecnología avanzada para garantizar una presencia online de alto impacto. ¡Haz realidad tu proyecto con nosotros!'
+				title='Diseño y desarrollo web'
+				text='En BDN Digital Studio, ofrecemos soluciones de desarrollo web en Badalona, desde sitios en WordPress hasta proyectos personalizados. Creamos páginas we con diseños atractivos, funcionales y adaptadas a tus necesidades. Nuestro enfoque combina diseño, rendimiento y tecnología avanzada para garantizar una presencia online de alto impacto. ¡Haz realidad tu proyecto con nosotros!'
 				image='building8.webp'
 				alt='Edificio arquitectónico'
 				href='/servicios/freelance-desarrollo-web'
 			/>
 			<RenderColumnText
-				title='Mantenimiento Web Profesional'
-				text='Mantén tu web segura y optimizada con el servicio de mantenimiento WordPress de BDN Digital Studio. Nos encargamos de actualizaciones, copias de seguridad, protección contra malware y optimización constante del rendimiento. Con nuestro soporte técnico especializado, garantizamos que tu sitio funcione perfectamente y esté siempre actualizado. ¡Deja tu web en manos de expertos!'
+				title='Mantenimiento de páginas web'
+				text='Mantén tu web segura y optimizada con el servicio de mantenimiento de páginas web en Badalona. Nos encargamos de actualizaciones, copias de seguridad, protección contra malware y optimización constante del rendimiento. Con nuestro soporte técnico especializado, garantizamos que tu sitio funcione perfectamente y esté siempre actualizado. ¡Deja tu web en manos de expertos!'
 				image='building9.webp'
 				revert
 				alt='Edificio arquitectónico'
 				href='/servicios/freelance-mantenimiento-web'
 			/>
 			<RenderColumnText
-				title='Optimización de Sitios Web'
-				text='Aumenta la velocidad y la eficiencia de tu sitio con nuestro servicio de optimización WordPress. En BDN Digital Studio, ajustamos plugins, temas y configuraciones para maximizar el rendimiento. Además, trabajamos con soluciones a medida en otros frameworks, como React o Astro, para garantizar una web rápida, segura y preparada para destacar en los resultados de búsqueda.'
+				title='Optimización de páginas web'
+				text='Aumenta la velocidad y la eficiencia de tu sitio con nuestro servicio de optimización de páginas web. En BDN Digital Studio, ajustamos plugins, temas y configuraciones para maximizar el rendimiento de tu página web Wordpress. Además, trabajamos con soluciones a medida en otros frameworks, como React, Astro o NextJS, para garantizar una web rápida, segura y preparada para destacar en los resultados de búsqueda.'
 				image='building11.webp'
 				alt='Edificio arquitectónico'
 				href='/servicios/freelance-optimizacion-web'
 			/>
-			<RenderColumnText
+			{/* <RenderColumnText
 				title='Gestión de Redes Sociales'
 				text='Impulsa la presencia digital de tu marca con nuestra gestión profesional de redes sociales en BDN Digital Studio. Creamos contenido atractivo, planificamos estrategias efectivas y gestionamos campañas publicitarias para conectar con tu audiencia ideal. Nuestro enfoque personalizado garantiza que tu marca destaque y logre resultados medibles en plataformas como Instagram, Facebook y LinkedIn.'
 				image='building12.webp'
 				alt='Edificio arquitectónico'
 				revert
 				href='/servicios/freelance-rrss'
-			/>
+			/> */}
 		</div>
 	);
 }

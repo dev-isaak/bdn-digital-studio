@@ -9,8 +9,8 @@ export const metadata = {
 	alternates: {
 		canonical: `https://bdndigitalstudio.com/servicios/freelance-optimizacion-web`,
 	},
-	title: `Optimización Web Freelance | BDN Digital Studio`,
-	description: `Aumenta la velocidad y la eficiencia de tu sitio con nuestro servicio de optimización WordPress. En BDN Digital Studio, ajustamos plugins, temas y configuraciones para maximizar el rendimiento. Además, trabajamos con soluciones a medida en otros frameworks, como React o Astro, para garantizar una web rápida, segura y preparada para destacar en los resultados de búsqueda.`,
+	title: `Optimización de páginas web | BDN Digital Studio`,
+	description: `Aumenta la velocidad y la eficiencia de tu sitio con nuestro servicio de optimización de páginas web. En BDN Digital Studio, ajustamos plugins, temas y configuraciones para maximizar el rendimiento.`,
 };
 
 export default function WebOptimizacion() {

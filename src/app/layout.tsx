@@ -11,7 +11,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: `BDN Digital Studio`,
+	title: `Agencia de desarrollo web en Badalona| BDN Digital Studio`,
 	description: `En BDN Digital Studio somos expertos en desarrollo web, optimización WordPress, SEO, SEM, Redes Sociales y mucho más. Creamos soluciones digitales personalizadas para potenciar tu presencia online.`,
 	openGraph: {
 		description:

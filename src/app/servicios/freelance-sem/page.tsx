@@ -10,7 +10,7 @@ export const metadata = {
 	alternates: {
 		canonical: `https://bdndigitalstudio.com/servicios/freelance-sem`,
 	},
-	title: `Agencia SEM y Gestión de Campañas Publicitarias | BDN Digital Studio`,
+	title: `Campañas de SEM | BDN Digital Studio`,
 	description: `Llega a tu audiencia ideal con campañas publicitarias optimizadas en Google Ads y otras plataformas. Como expertos en SEM, diseñamos estrategias personalizadas para aumentar tu visibilidad, atraer clientes potenciales y maximizar tu retorno de inversión. Resultados rápidos y medibles garantizados.`,
 };
 

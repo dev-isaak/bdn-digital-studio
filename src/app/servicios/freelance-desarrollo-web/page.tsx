@@ -11,28 +11,29 @@ export const metadata = {
 	alternates: {
 		canonical: `https://bdndigitalstudio.com/servicios/freelance-desarrollo-web`,
 	},
-	title: `Desarrollo Web Freelance | BDN Digital Studio`,
-	description: `En BDN Digital Studio, ofrecemos soluciones de desarrollo web en Barcelona, desde sitios en WordPress hasta proyectos personalizados con tecnologías como React y Astro. Creamos páginas atractivas, funcionales y adaptadas a tus necesidades. Nuestro enfoque combina diseño, rendimiento y tecnología avanzada para garantizar una presencia online de alto impacto. ¡Haz realidad tu proyecto con nosotros!`,
+	title: `Diseño y desarrollo de páginas web | BDN Digital Studio`,
+	description: `Ofrecemos soluciones de diseño y desarrollo web en Badalona, desde sitios en WordPress hasta proyectos personalizados. Creamos páginas atractivas, funcionales y adaptadas a tus necesidades. ¡Haz realidad tu proyecto con nosotros!`,
 };
 
 export default function WebDevelopment() {
 	return (
 		<div className='flex flex-col gap-10 mb-10'>
 			<h1 className='uppercase text-4xl font-semibold text-gray-800'>
-				Desarrollo Web a Medida y en WordPress
+				Diseño y desarrollo web a medida y en WordPress
 			</h1>
 			<section>
 				<TwoBlockGrid
 					imageURL='/assets/images/building8.webp'
 					altText='Edificio arquitectónico'>
 					<p>
-						En BDN Digital Studio, somos una agencia freelance especializada en{" "}
-						<strong>desarrollo web en Barcelona</strong>. Nos apasiona crear
-						experiencias digitales únicas, adaptadas a las necesidades de
-						nuestros clientes. Ofrecemos soluciones integrales que incluyen
-						desde la <strong>creación de sitios en WordPress</strong> hasta
-						proyectos de desarrollo a medida utilizando tecnologías avanzadas
-						como NextJS o Astro.
+						En BDN Digital Studio, somos una agencia de páginas web freelance
+						especializada en <strong>desarrollo web en Badalona</strong>. Nos
+						apasiona crear experiencias digitales únicas, adaptadas a las
+						necesidades de nuestros clientes. Ofrecemos soluciones integrales
+						que incluyen desde la{" "}
+						<strong>creación de sitios en WordPress</strong> hasta proyectos de
+						desarrollo a medida utilizando tecnologías avanzadas como NextJS o
+						Astro.
 					</p>
 				</TwoBlockGrid>
 			</section>
@@ -67,7 +68,7 @@ export default function WebDevelopment() {
 			<section>
 				<Heading
 					firstText='Qué te ofrecemos'
-					secondText='Como agencia web freelance'
+					secondText='Como agencia de páginas web freelance'
 				/>
 				<p>
 					En BDN Digital Studio, nos especializamos en las tecnologías más

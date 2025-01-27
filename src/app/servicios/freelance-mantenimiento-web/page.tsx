@@ -9,8 +9,8 @@ export const metadata = {
 	alternates: {
 		canonical: `https://bdndigitalstudio.com/servicios/freelance-mantenimiento-web`,
 	},
-	title: `Mantenimiento Web Freelance | BDN Digital Studio`,
-	description: `Mantén tu web segura y optimizada con el servicio de mantenimiento WordPress de BDN Digital Studio. Nos encargamos de actualizaciones, copias de seguridad, protección contra malware y optimización constante del rendimiento. Con nuestro soporte técnico especializado, garantizamos que tu sitio funcione perfectamente y esté siempre actualizado. ¡Deja tu web en manos de expertos!`,
+	title: `Mantenimiento de páginas web | BDN Digital Studio`,
+	description: `Mantén tu web segura y optimizada con el servicio de mantenimiento de páginas web en Badalona. Nos encargamos de actualizaciones, copias de seguridad, protección contra malware y optimización constante del rendimiento.`,
 };
 
 export default function MaintenaceWeb() {
