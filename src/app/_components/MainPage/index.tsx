@@ -1,7 +1,5 @@
 import CarousselTitle from "../CarousselTitle";
 import ContactBlock from "../ContactBlock";
-import AnimatedHeroText from "./AnimatedHeroText";
-import AnimatedTitle from "./AnimatedTitle";
 import Faqs from "./Faqs";
 import Purpose from "./Purpose";
 import Services from "./Services";
@@ -23,7 +21,7 @@ export default function MainPage() {
 					muted
 					loop
 					playsInline
-					poster='hero-poster.jpg'>
+					poster='/assets/images/video-poster.webp'>
 					<source src='/assets/videos/HOLA-HEADER.mp4' type='video/mp4' />
 					Tu navegador no soporta videos.
 				</video>
