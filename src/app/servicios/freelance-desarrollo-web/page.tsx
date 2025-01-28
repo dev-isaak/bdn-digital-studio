@@ -1,7 +1,6 @@
 import Heading from "@/app/_components/Heading";
 import TwoBlockGrid from "../components/TwoBlockGrid";
-import { Button, Image, Link } from "@nextui-org/react";
-import { ImCross } from "react-icons/im";
+import { Image } from "@nextui-org/react";
 import HowWeWork from "./HowWeWork";
 import Faq from "./Faq";
 import ContactBlock from "@/app/_components/ContactBlock";
@@ -65,7 +64,7 @@ export default function WebDevelopment() {
 					height={400}
 				/>
 			</div>
-			{/* <section>
+			<section>
 				<Heading
 					firstText='Qué te ofrecemos'
 					secondText='Como empresa de desarrollo de páginas web'
@@ -79,7 +78,7 @@ export default function WebDevelopment() {
 				<div className='flex justify-center xl:justify-between bg-[#6ba8ac50] p-4 flex-wrap mt-4 gap-4'>
 					<CardDevelopment />
 				</div>
-			</section> */}
+			</section>
 			<section>
 				<Heading
 					firstText='Cómo trabajamos'
